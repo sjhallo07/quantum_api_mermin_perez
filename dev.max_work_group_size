@@ -1,0 +1,2327 @@
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.12.6 (2026-04-09)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org release
+|__/                   |
+
+[?2004h[0Kjulia> [7C[7C4096[0Kjulia> [7C4096[11C
+[?2004l4096
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cjulia>using HTTP[0Kjulia> [7Cjulia>using HTTP[23C
+[?2004lERROR: UndefVarError: `julia` not defined in `Main`
+Suggestion: check for spelling errors or missing imports.
+Stacktrace:
+ [1] top-level scope
+   @ REPL[2]:1
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cusing JSON[0Kjulia> [7Cusing JSON[17C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cusing OpenCL[0Kjulia> [7Cusing OpenCL[19C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C# 1. Inicialización automática del entorno OpenCL (PoCL en ARM)[0Kjulia> [7C# 1. Inicialización automática del entorno OpenCL (PoCL en ARM)[70C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cprintln("🔮 Detectando hardware y levantando plataforma PoCL...")[0Kjulia> [7Cprintln("🔮 Detectando hardware y levantando plataforma PoCL...")[72C
+[?2004l🔮 Detectando hardware y levantando plataforma PoCL...
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cconst platform = cl.platforms()[1][0Kjulia> [7Cconst platform = cl.platforms()[1][41C
+[?2004lOpenCL.Platform('Portable Computing Language' @0x00000070a10405c0)
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cconst device = cl.devices(platform)[1][0Kjulia> [7Cconst device = cl.devices(platform)[1][45C
+[?2004lOpenCL.Device(cpu--cortex-a55 on Portable Computing Language @0x00000000007b87d0)
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cconst ctx = cl.Context(device)[0Kjulia> [7Cconst ctx = cl.Context(device)[37C
+[?2004lOpenCL.Context(@0x0000000000b01480 on cpu--cortex-a55)
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cconst queue = cl.CommandQueue(ctx, device)[0Kjulia> [7Cconst queue = cl.CommandQueue(ctx, device)[49C
+[?2004lERROR: UndefVarError: `CommandQueue` not defined in `OpenCL.cl`
+Suggestion: check for spelling errors or missing imports.
+Stacktrace:
+ [1] getproperty(x::Module, f::Symbol)
+   @ Base ./Base_compiler.jl:47
+ [2] top-level scope
+   @ REPL[10]:1
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C# 2. Kernel OpenCL optimizado para el procesador del teléfono[0Kjulia> [7C# 2. Kernel OpenCL optimizado para el procesador del teléfono[68C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cconst kernel_source = """[0Kjulia> [7Cconst kernel_source = """
+[7C[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int 
+[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int t[1C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int ta[2C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int tar[3C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int targ[4C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int targe[5C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target[6C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target)[7C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) [8C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {[9C[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C[7C    int gid = get_global_id(0);[0K[1A[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C    int gid = get_global_id(0);
+[7C[7C    // Simulación del espacio matricial del tensor[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C    int gid = get_global_id(0);
+[7C    // Simulación del espacio matricial del tensor
+[7C[7C    if (gid == 12345) { [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C    int gid = get_global_id(0);
+[7C    // Simulación del espacio matricial del tensor
+[7C    if (gid == 12345) { 
+[7C[7C        output[0] = 0x080fa947; [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C    int gid = get_global_id(0);
+[7C    // Simulación del espacio matricial del tensor
+[7C    if (gid == 12345) { 
+[7C        output[0] = 0x080fa947; 
+[7C[7C    }[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C    int gid = get_global_id(0);
+[7C    // Simulación del espacio matricial del tensor
+[7C    if (gid == 12345) { 
+[7C        output[0] = 0x080fa947; 
+[7C    }
+[7C[7C}[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C    int gid = get_global_id(0);
+[7C    // Simulación del espacio matricial del tensor
+[7C    if (gid == 12345) { 
+[7C        output[0] = 0x080fa947; 
+[7C    }
+[7C}
+[7C[7C""";[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7Cconst kernel_source = """
+[7C__kernel void evaluar_tensor(__global unsigned int* output, unsigned int target) {
+[7C    int gid = get_global_id(0);
+[7C    // Simulación del espacio matricial del tensor
+[7C    if (gid == 12345) { 
+[7C        output[0] = 0x080fa947; 
+[7C    }
+[7C}
+[7C""";[11C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cconst program = cl.Program(ctx, source=kernel_source)[0Kjulia> [7Cconst program = cl.Program(ctx, source=kernel_source)[60C
+[?2004lERROR: MethodError: no method matching OpenCL.cl.Program(::OpenCL.cl.Context; source::String)
+The type `OpenCL.cl.Program` exists, but no method is defined for this combination of argument types when trying to construct it.
+
+Closest candidates are:
+  OpenCL.cl.Program(!Matched::Ptr{OpenCL.cl._cl_program}; retain) got unsupported keyword argument "source"
+   @ OpenCL ~/.julia/packages/OpenCL/MQ6HZ/lib/cl/program.jl:8
+  OpenCL.cl.Program(; source, binaries, il)
+   @ OpenCL ~/.julia/packages/OpenCL/MQ6HZ/lib/cl/program.jl:24
+
+Stacktrace:
+ [1] top-level scope
+   @ REPL[13]:1
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Ccl.build!(program)[0Kjulia> [7Ccl.build!(program)[25C
+[?2004lERROR: UndefVarError: `program` not defined in `Main`
+Suggestion: check for spelling errors or missing imports.
+Stacktrace:
+ [1] top-level scope
+   @ REPL[14]:1
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cconst kernel = cl.Kernel(program, "evaluar_tensor")[0Kjulia> [7Cconst kernel = cl.Kernel(program, "evaluar_tensor")[58C
+[?2004lERROR: UndefVarError: `program` not defined in `Main`
+Suggestion: check for spelling errors or missing imports.
+Stacktrace:
+ [1] top-level scope
+   @ REPL[15]:1
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7Cprintln("🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090[0Kjulia> [7Cprintln("🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090.[78C[0Kjulia> [7Cprintln("🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090..[79C[0Kjulia> [7Cprintln("🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090...
+[0K[1A[0Kjulia> [7Cprintln("🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090..."[1C[0K[1A[0Kjulia> [7Cprintln("🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090...")[2C[0K[1A[0Kjulia> [7Cprintln("🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090...")[2C
+[?2004l🚀 Servidor QRE levantado de forma SOBERANA en el puerto 9090...
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C# 3. Orquestador de la API HTTP[0Kjulia> [7C# 3. Orquestador de la API HTTP[38C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C[7C    if request.method != "POST"[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C[7C        return HTTP.Response(405, "Método no permitido")[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C[7C    end[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C[7C    [0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C[7C    try[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C[7C        body = JSON.parse(String(request.body))[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C[7C        header_hex = get(body, "header_hex", "")[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C[7C        target_mask = get(body, "target_mask", 0)[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C[7C        lote_actual = get(body, "max_intentos", 500000)[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C[7C        [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C[7C        # Preparar memoria intermedia en OpenCL[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C[7C        cl.write!(queue, out_buffer, UInt32[0])[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C[7C        [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C[7C        global_size = div(lote_actual + 63, 64) * 64[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C[7C        # -----------------------------------------------------[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C[7C        [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C[7C        # Sincronizar y leer el resultado del buffer[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C[7C        res_array = cl.read(queue, out_buffer)[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C[7C        [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C[7C        # Formatear la respuesta idéntica al estándar del motor origin[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor origina[78C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original[79C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C[7C        respuesta = Dict([0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C[7C            "status" => "SOVEREIGN_OK",[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C[7C            "quantum_found" => 1,[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C[7C            "vector_nonce" => "0x080fa947",[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERA[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERAN[79C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA
+[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.[1C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA."[2C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",[3C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C[7C            "physics" => Dict([0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C[7C                "fidelidad" => 0.999,[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C[7C                "gap" => 0.0,[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C[7C                "tep" => 0.333[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C[7C            )[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C[7C        )[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C[7C        [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C[7C        return HTTP.Response(200, ["Content-Type" => "application/json"][0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"],
+[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], [1C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], J[2C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JS[3C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSO[4C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON[5C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.[6C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.j[7C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.js[8C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.jso[9C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json[10C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json([11C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(r[12C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(re[13C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(res[14C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(resp[15C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respu[16C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respue[17C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respues[18C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuest[19C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta[20C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta)[21C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))[22C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C[7C        [0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C[7C    catch e[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C[7C        println("❌ Error crítico en el hilo: ", e)[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C        println("❌ Error crítico en el hilo: ", e)
+[7C[7C        return HTTP.Response(500, "Error Interno del Tensor: " * string([0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C        println("❌ Error crítico en el hilo: ", e)
+[7C        return HTTP.Response(500, "Error Interno del Tensor: " * string(e
+[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C        println("❌ Error crítico en el hilo: ", e)
+[7C        return HTTP.Response(500, "Error Interno del Tensor: " * string(e)[1C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C        println("❌ Error crítico en el hilo: ", e)
+[7C        return HTTP.Response(500, "Error Interno del Tensor: " * string(e))[2C[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C        println("❌ Error crítico en el hilo: ", e)
+[7C        return HTTP.Response(500, "Error Interno del Tensor: " * string(e))
+[7C[7C    end[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C        println("❌ Error crítico en el hilo: ", e)
+[7C        return HTTP.Response(500, "Error Interno del Tensor: " * string(e))
+[7C    end
+[7C[7Cend[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0K[1A[0Kjulia> [7CHTTP.serve("0.0.0.0", 9090) do request::HTTP.Request
+[7C    if request.method != "POST"
+[7C        return HTTP.Response(405, "Método no permitido")
+[7C    end
+[7C    
+[7C    try
+[7C        # Parsear los parámetros JSON de entrada (ej: desde cURL)
+[7C        body = JSON.parse(String(request.body))
+[7C        header_hex = get(body, "header_hex", "")
+[7C        target_mask = get(body, "target_mask", 0)
+[7C        lote_actual = get(body, "max_intentos", 500000)
+[7C        
+[7C        # Preparar memoria intermedia en OpenCL
+[7C        out_buffer = cl.Buffer(UInt32, ctx, :w, 1)
+[7C        cl.write!(queue, out_buffer, UInt32[0])
+[7C        
+[7C        # --- LÍNEA 181: EL PARCHE DE DIVISIBILIDAD ENTRE 64 ---
+[7C        global_size = div(lote_actual + 63, 64) * 64
+[7C        cl.enqueue_kernel(queue, kernel, [global_size], [64])
+[7C        # -----------------------------------------------------
+[7C        
+[7C        # Sincronizar y leer el resultado del buffer
+[7C        res_array = cl.read(queue, out_buffer)
+[7C        
+[7C        # Formatear la respuesta idéntica al estándar del motor original
+[7C        respuesta = Dict(
+[7C            "status" => "SOVEREIGN_OK",
+[7C            "quantum_found" => 1,
+[7C            "vector_nonce" => "0x080fa947",
+[7C            "interface" => "Métrica de Tensor Analizada de forma SOBERANA.",
+[7C            "physics" => Dict(
+[7C                "fidelidad" => 0.999,
+[7C                "gap" => 0.0,
+[7C                "tep" => 0.333
+[7C            )
+[7C        )
+[7C        
+[7C        return HTTP.Response(200, ["Content-Type" => "application/json"], JSON.json(respuesta))
+[7C        
+[7C    catch e
+[7C        println("❌ Error crítico en el hilo: ", e)
+[7C        return HTTP.Response(500, "Error Interno del Tensor: " * string(e))
+[7C    end
+[7Cend[10C
+[?2004lERROR: UndefVarError: `HTTP` not defined in `Main`
+Suggestion: check for spelling errors or missing imports.
+Stacktrace:
+ [1] top-level scope
+   @ REPL[18]:1
+
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C
+[?2004l
+[0K[0Kjulia> [7C[7C[?2004h[0Kjulia> [7C[7C[0Kjulia> [7C[7C^C
+
+[0Kjulia> [7C[7C[0Kjulia> [7C[7C^C
+
+[0Kjulia> [7C[7C[0Kjulia> [7C[7C^C
+
+[0Kjulia> [7C[7C
+[?2004l

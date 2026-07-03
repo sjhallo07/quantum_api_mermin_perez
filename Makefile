@@ -38,3 +38,6 @@ start:
 
 view-qubits:
 	@julia -e 'println("\n" * "="^60 * "\n 🔮 REGISTRO QRE (BELL / GHZ)\n" * "="^60); ψ = [1/sqrt(2), 0.0, 0.0, 1/sqrt(2)]; estados = ["|00⟩", "|01⟩", "|10⟩", "|11⟩"]; println("| Estado | Amplitud Compleja   | Probabilidad de Colapso |"); println("|--------|---------------------|-------------------------|"); for i in 1:4; prob = round(abs2(ψ[i]) * 100, digits=2); amp = string(round(real(ψ[i]), digits=4)) * " + " * string(round(imag(ψ[i]), digits=4)) * "im"; println("| " * rpad(estados[i], 6) * " | " * rpad(amp, 19) * " | " * rpad(string(prob) * "%", 23) * " |") end; println("="^60)'
+
+show-matrices:
+	@julia -e 'println("=== MATRIZ SOBERANA ==="); A = [1 0; 0 1]; println(A)'
