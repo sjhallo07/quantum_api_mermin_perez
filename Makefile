@@ -31,3 +31,7 @@ push:
 	@git add /tmp/*.jl /tmp/*.py /tmp/Makefile /tmp/README.md
 	@git commit -m "Docs: Actualización completa del README.md con la guía de Termux" || true
 	@git push origin main
+
+start:
+	@chmod +x /tmp/start_qre.sh
+	@/tmp/start_qre.sh
