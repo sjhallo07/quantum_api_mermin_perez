@@ -25,3 +25,9 @@ stress-api:
 
 pipeline:
 	@/tmp/qre_pipeline.sh
+
+push:
+	@echo "📦 Sincronizando repositorio con GitHub..."
+	@git add /tmp/*.jl /tmp/*.py /tmp/Makefile /tmp/README.md
+	@git commit -m "Docs: Actualización completa del README.md con la guía de Termux" || true
+	@git push origin main
