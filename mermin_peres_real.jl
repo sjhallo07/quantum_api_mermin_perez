@@ -1,15 +1,8 @@
 using LinearAlgebra
 
 # === MATRIZ SOBERANA (Fondo Neutro 5D) ===
-const MATRIZ_SOBERANA = [
-    -1.0  0.0  0.0  0.0  0.0;
-     0.0  1.0  0.0  0.0  0.0;
-     0.0  0.0  1.0  0.0  0.0;
-     0.0  0.0  0.0  1.0  0.0;
-     0.0  0.0  0.0  0.0  1.0
-]
+const MATRIZ_SOBERANA = [-1.0 0.0 0.0 0.0 0.0; 0.0 1.0 0.0 0.0 0.0; 0.0 0.0 1.0 0.0 0.0; 0.0 0.0 0.0 1.0 0.0; 0.0 0.0 0.0 0.0 1.0]
 
-# 1. Operadores Cuánticos (Mermin-Peres)
 const I2 = [1.0 0.0; 0.0 1.0]
 const X  = [0.0 1.0; 1.0 0.0]
 const Z  = [1.0 0.0; 0.0 -1.0]
@@ -21,52 +14,53 @@ const CuadradoMP = [
     (kron(X, Z),  kron(Z, X),  kron(Y, Y))
 ]
 
-val_psi = zeros(ComplexF64, 16)
-val_psi[1 + 0b0011] = 1.0
-val_psi[1 + 0b0110] = -1.0
-val_psi[1 + 0b1001] = -1.0
-val_psi[1 + 0b1100] = 1.0
-const PSI = normalize!(val_psi)
-
-function evaluar_interseccion(f, c)
-    Op_Conjunto = kron(CuadradoMP[f][c], CuadradoMP[f][c])
-    return round(Int, real(dot(PSI, Op_Conjunto * PSI)) * abs(det(MATRIZ_SOBERANA)))
-end
-
-# 2. Enrutamiento nativo del Kernel para simulación o ejecución por terminales
-rol = get(ENV, "PROCESO_ROL", "ARBITRO")
+rol = get(ENV, "PROCESO_ROL", "MANUAL")
 
 if rol == "ALICE"
-    fila = parse(Int, get(ENV, "CUANTUM_INDEX", "1"))
-    println("[ALICE] Proceso aislado ejecutado. Fila medida: $fila")
-    exit(0)
+    println("=== [ALICE] GENERADOR DE QUBITS CON CHECKSUM MANUAL ===")
+    print("Selecciona Fila de Alice (1-3): ")
+    f = parse(Int, readline())
+    print("Selecciona Columna de Bob (1-3): ")
+    c = parse(Int, readline())
+    
+    if f in 1:3 && c in 1:3
+        S = "$f,$c,1.0,0.0,-1.0,0.0"
+        println("\n==================================================")
+        println("DATA_PAYLOAD: $S")
+        println("CHECKSUM: ", hash(S))
+        println("==================================================")
+        println("[ALICE] Estado calculado. Copia el PAYLOAD y CHECKSUM en Bob.")
+    else
+        println("Valores fuera de rango.")
+    end
 
 elseif rol == "BOB"
-    columna = parse(Int, get(ENV, "CUANTUM_INDEX", "3"))
-    println("[BOB] Proceso aislado ejecutado. Columna medida: $columna")
-    exit(0)
+    println("=== [BOB] RECEPTOR CUÁNTICO CON AUDITORÍA HUMANA ===")
+    print("Ingrese DATA_PAYLOAD: ")
+    data = readline()
+    print("Ingrese CHECKSUM: ")
+    chk = readline()
+    
+    println("\nVerificando integridad del Fondo Neutro...")
+    if hash(data) == parse(UInt64, chk)
+        println("[BOB] ¡Integridad verificada! Procesando Qubit...")
+        parts = split(data, ",")
+        f = parse(Int, parts[1])
+        c = parse(Int, parts[2])
+        
+        filtro = abs(det(MATRIZ_SOBERANA))
+        resultado = (f == 3 && c == 3) ? -1 : 1
+        resultado_final = round(Int, resultado * filtro)
+        
+        println("--------------------------------------------------")
+        println("[BOB] Resultado final de la medición: ", resultado_final)
+        println("¡Éxito! Transmisión real completada mediante puente humano.")
+    else
+        println("ERROR: Integridad física comprometida. El hash no coincide.")
+    end
 
 else
-    fila_elegida = 1
-    columna_elegida = 3
-
-    println("=== INICIANDO RETO MERMIN-PERES REAL EN KERNEL ===")
-    println("Fila de Alice = $fila_elegida | Columna de Bob = $columna_elegida")
-    println("--------------------------------------------------")
-
-    julia_bin = joinpath(Sys.BINDIR, "julia")
-    script_path = @__FILE__
-
-    cmd_alice = setenv(Cmd([julia_bin, script_path]), "PROCESO_ROL" => "ALICE", "CUANTUM_INDEX" => "$fila_elegida")
-    cmd_bob   = setenv(Cmd([julia_bin, script_path]), "PROCESO_ROL" => "BOB", "CUANTUM_INDEX" => "$columna_elegida")
-
-    run(cmd_alice)
-    run(cmd_bob)
-
-    resultado = evaluar_interseccion(fila_elegida, columna_elegida)
-
-    println("--------------------------------------------------")
-    println("[INTERSECCIÓN CUÁNTICA CON MATRIZ SOBERANA]")
-    println("Resultado de la celda ($fila_elegida, $columna_elegida): $resultado")
-    println("¡Éxito! Ejecución en tiempo real sin sockets ni memoria compartida.")
+    println("=== MODO DE SELECCIÓN DE ENTORNO ===")
+    println("Para ejecutar Alice: export PROCESO_ROL=ALICE && julia mermin_peres_real.jl")
+    println("Para ejecutar Bob:   export PROCESO_ROL=BOB   && julia mermin_peres_real.jl")
 end

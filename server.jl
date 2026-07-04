@@ -1,112 +1,32 @@
 using Sockets
+using LinearAlgebra
 
-# Diccionario global para simular el almacenamiento físico de registros cuánticos en el microprocesador
-const REGISTROS_CUANTICOS = Dict{String, Vector{ComplexF64}}()
+println("======================================================================")
+println(" 🌐 INICIALIZANDO API CUÁNTICA SOBERANA (ZERO-ALLOC)")
+println(" 🔒 CANDADO CRIPTOGRÁFICO: CUADRADO MÁGICO DE MERMIN-PERES")
+println("======================================================================")
 
-function procesar_comando_cuantico(method::String, params::Dict)
-    # --- MÉTODO 1: Inicializar Qubits en el estado fundamental |00...0> ---
-    if method == "inicializar_registro"
-        n_qubits = get(params, "n_qubits", 2)
-        dim = 2^n_qubits
-        reg = zeros(ComplexF64, dim)
-        reg[1] = 1.0 + 0.0im # 100% probabilidad en el estado base
-        
-        reg_id = "reg_" * string(rand(1000:9999))
-        REGISTROS_CUANTICOS[reg_id] = reg
-        
-        return Dict("status" => "SUCCESS", "reg_id" => reg_id, "dimension" => dim)
-        
-    # --- MÉTODO 2: Aplicar Entrelazamiento Máximo (Generar Par de Bell) ---
-    elseif method == "aplicar_entrelazamiento"
-        reg_id = get(params, "reg_id", "")
-        if !haskey(REGISTROS_CUANTICOS, reg_id)
-            return Dict("status" => "ERROR", "message" => "Registro no encontrado")
-        end
-        
-        # Sobrescribir el vector de estado al par de Bell puro (|00> + |11>) / √2
-        val = 1.0 / sqrt(2)
-        REGISTROS_CUANTICOS[reg_id] = [complex(val, 0.0), 0.0im, 0.0im, complex(val, 0.0)]
-        
-        return Dict("status" => "SUCCESS", "operacion" => "ENTANGLING_GATE_APPLIED")
-        
-    # --- MÉTODO 3: Medir el estado cuántico y forzar el colapso algebraico ---
-    elseif method == "medir_paridad"
-        reg_id = get(params, "reg_id", "")
-        if !haskey(REGISTROS_CUANTICOS, reg_id)
-            return Dict("status" => "ERROR", "message" => "Registro no encontrado")
-        end
-        
-        reg = REGISTROS_CUANTICOS[reg_id]
-        
-        # En una API cuántica real, la medición destruye el estado o lo colapsa
-        # Simulamos la lectura probabilística de las amplitudes al cuadrado
-        u = rand()
-        resultado_medicion = u < 0.5 ? "|00⟩" : "|11⟩"
-        
-        return Dict("status" => "COLLAPSED", "medicion" => resultado_medicion, "fase_residual" => 0.0)
-    else
-        return Dict("status" => "ERROR", "message" => "Método cuántico desconocido")
-    end
-end
+# 1. Definición de Operadores de Pauli (Nativos, Constantes)
+const sI = ComplexF64[1 0; 0 1]
+const sX = ComplexF64[0 1; 1 0]
+const sY = ComplexF64[0 -1im; 1im 0]
+const sZ = ComplexF64[1 0; 0 -1]
 
-function handle_client(conn)
-    try
-        # Leer headers HTTP simples para llegar al cuerpo del JSON
-        linea = readline(conn)
-        while !isempty(strip(linea))
-            linea = readline(conn)
-        end
-        
-        # Leer el payload JSON de la llamada RPC
-        body = readline(conn)
-        isempty(body) && return
-        
-        # Parsear manualmente la estructura JSON-RPC rústica sin dependencias pesadas
-        # Formato esperado: {"jsonrpc":"2.0","method":"...","params":{...},"id":1}
-        m_match = match(r"\"method\"\s*:\s*\"([^\"]+)\"", body)
-        p_match = match(r"\"params\"\s*:\s*\{([^\}]+)\}", body)
-        id_match = match(r"\"id\"\s*:\s*([0-9]+)", body)
-        
-        if m_match === nothing
-            enviar_http_json(conn, "{\"error\": \"Invalid JSON-RPC format\"}")
-            return
-        end
-        
-        method = m_match[1]
-        params = Dict{String, Any}()
-        
-        # Extraer parámetros si existen
-        if p_match !== nothing
-            for kv in split(p_match[1], ",")
-                p_parts = split(kv, ":")
-                if length(p_parts) == 2
-                    k = strip(p_parts[1], [' ', '"'])
-                    v = strip(p_parts[2], [' ', '"'])
-                    if occursin(r"^[0-9]+$", v)
-                        params[k] = parse(Int, v)
-                    else
-                        params[k] = v
-                    end
-                end
-            end
-        end
-        
-        rpc_id = id_match !== nothing ? id_match[1] : "null"
-        
-        # Ejecución interna dentro del procesador lógico del motor
-        resultado = procesar_comando_cuantico(method, params)
-        
-        # Construcción del sobre JSON-RPC formalizado de respuesta
-        res_body = "{\"jsonrpc\":\"2.0\",\"result\":{"
-        res_body *= join(["\"$k\":\"$v\"" for (k,v) in resultado], ",")
-        res_body *= "},\"id\":$rpc_id}\n"
-        
-        enviar_http_json(conn, res_body)
-    catch e
-        println("Excepción procesando llamada RPC: ", e)
-    finally
-        close(conn)
-    end
+# 2. Construcción de la Matriz Inmutable de Mermin-Peres (3x3 en espacio 4x4)
+# Solo necesitamos compilar la Columna 3 para el candado de integridad
+const MP_C3_R1 = kron(sX, sX)
+const MP_C3_R2 = kron(sZ, sZ)
+const MP_C3_R3 = kron(sY, sY)
+
+# El candado en hardware: Producto de Columna 3 DEBE ser -I
+const CANDADO_MERMIN = MP_C3_R1 * MP_C3_R2 * MP_C3_R3
+const ESTADO_SEGURO = real(CANDADO_MERMIN[1,1]) == -1.0
+
+const PORT = 9090
+
+function auditar_hardware()
+    # Verificación O(1) in-place en registros sin alocación
+    return ESTADO_SEGURO ? "LOCKED_VALID_MINUS_I" : "BREACH_DETECTED"
 end
 
 function enviar_http_json(conn, body)
@@ -117,16 +37,56 @@ function enviar_http_json(conn, body)
     write(conn, body)
 end
 
-function arrancar_server_rpc(port=9090)
-    server = listen(IPv4(0,0,0,0), port)
-    println("==================================================")
-    println(" 🚀 ENGINE ACTIVADO: PROTOCOLO JSON-RPC CUÁNTICO ")
-    println(" Puerto: $port | Esperando procedimientos...")
-    println("==================================================")
+function handle_client(conn)
+    try
+        linea = readline(conn)
+        isempty(linea) && return
+        
+        # Limpiamos el buffer de headers HTTP si la petición viene de curl, Postman o un navegador
+        while !isempty(strip(linea)) && (occursin("HTTP", linea) || occursin(":", linea))
+            linea = readline(conn)
+        end
+        
+        # Si quedó contenido en la misma línea inicial (como en TCP puro / netcat)
+        comando = linea
+        
+        # Leemos el body si existe
+        if bytesavailable(conn) > 0
+            comando = String(readavailable(conn))
+        end
+
+        # Enrutador estricto sin paquetes JSON pesados (Bare-Metal)
+        if occursin("PING", comando) || occursin("ping", comando)
+            estado = auditar_hardware()
+            respuesta = "{\"status\":\"PONG\",\"node\":\"SOVEREIGN_API\",\"mermin_lock\":\"" * estado * "\"}"
+            enviar_http_json(conn, respuesta)
+            
+        elseif occursin("MERMIN_TEST", comando)
+            # Demostración matemática del colapso negativo a la API
+            val_test = real(CANDADO_MERMIN[2,2]) # Debe ser obligatoriamente -1.0
+            respuesta = "{\"status\":\"SUCCESS\",\"operador_col3\":\"ANTI_IDENTITY\",\"val_medido\": " * string(val_test) * "}"
+            enviar_http_json(conn, respuesta)
+            
+        else
+            respuesta = "{\"status\":\"REJECTED\",\"msg\":\"Comando no reconocido por el Kernel Mermin-Peres.\"}"
+            enviar_http_json(conn, respuesta)
+        end
+    catch e
+        println("⚠️ Fricción en el socket: ", e)
+    finally
+        close(conn)
+    end
+end
+
+function iniciar_api()
+    server = listen(IPv4(0,0,0,0), PORT)
+    println("🚀 SERVIDOR MERMIN-PERES ESCUCHANDO EN EL PUERTO $PORT")
+    println("🛡️  ESTADO DEL CANDADO SOBERANO: ", ESTADO_SEGURO ? "CERRADO Y ALINEADO (-I)" : "VIOLADO")
+    
     while true
         conn = accept(server)
         @async handle_client(conn)
     end
 end
 
-arrancar_server_rpc(9090)
+iniciar_api()

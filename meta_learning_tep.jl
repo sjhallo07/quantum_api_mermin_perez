@@ -1,84 +1,88 @@
 using LinearAlgebra
 using Printf
-using Statistics
 
-println("======================================================================")
-println("   MOTOR QRE FASE II: NÚCLEO DE MEJORA RECURSIVA (RSI - NO DATA SAVE) ")
-println("======================================================================\n")
+const MATRIZ_SOBERANA_5D = Float64[
+    -1.0  0.0  0.0  0.0  0.0;
+     0.0  1.0  0.0  0.0  0.0;
+     0.0  0.0  1.0  0.0  0.0;
+     0.0  0.0  0.0  1.0  0.0;
+     0.0  0.0  0.0  0.0  1.0
+]
 
-# 1. ENTRADA VOLÁTIL DEL LOG JSON (Procesado directamente en memoria sin persistencia)
-const TARGET_DELTA = 0.332838          # Extraído del JSON de Fase II
-const WEINBERG_INICIAL = 0.44856123    # Acoplamiento calibrado actual
+const MATRIZ_DENSIDAD_4x4 = Float64[
+    0.2500  0.3500  0.2600  0.2510;
+    0.3500  0.2500  0.3500  0.2600;
+    0.2600  0.3500  0.2500  0.3500;
+    0.2510  0.2600  0.3500  0.2500
+]
 
-function evaluar_tep(weinberg_coupling)
-    # Estado inicial: Singlete de Bell
-    psi_inicial = [0.0, 1/sqrt(2), -1/sqrt(2), 0.0]
+const TARGET_DELTA = 0.332838          
+const WEINBERG_INICIAL = 0.44856123    
+
+const BUFFER_PSI_INICIAL = [0.0, 1/sqrt(2), -1/sqrt(2), 0.0]
+const BUFFER_PSI_ATAQUE  = zeros(4)
+const BUFFER_PSI_FINAL   = zeros(4)
+
+function evaluar_tep_soberano(weinberg_coupling)
+    factor_soberano = abs(MATRIZ_SOBERANA_5D[1,1])
     
-    # Operador de ataque local amortiguado por el acoplamiento no-lineal (Weinberg)
-    M_unitaria = [1.0 0.0; 0.0 weinberg_coupling] 
-    M_ataque = kron(M_unitaria, Matrix{Float64}(I, 2, 2))
-    
-    psi_ataque = M_ataque * psi_inicial
-    norma_tras_ataque = norm(psi_ataque)
-    
-    # Renormalización global
-    psi_final = psi_ataque / norma_tras_ataque
-    
-    # Observador cuántico local en B
-    P_B = kron(Matrix{Float64}(I, 2, 2), [0.0 0.0; 0.0 1.0]) 
-    
-    val_B_inicial = real(dot(psi_inicial, P_B * psi_inicial))
-    val_B_final = real(dot(psi_final, P_B * psi_final))
-    
+    BUFFER_PSI_ATAQUE[1] = BUFFER_PSI_INICIAL[1] * factor_soberano
+    BUFFER_PSI_ATAQUE[2] = BUFFER_PSI_INICIAL[2] * factor_soberano
+    BUFFER_PSI_ATAQUE[3] = BUFFER_PSI_INICIAL[3] * weinberg_coupling
+    BUFFER_PSI_ATAQUE[4] = BUFFER_PSI_INICIAL[4] * weinberg_coupling
+
+    sum_sq = 0.0
+    for i in 1:4
+        @inbounds sum_sq += BUFFER_PSI_ATAQUE[i]^2
+    end
+    norma_tras_ataque = sqrt(sum_sq)
+
+    for i in 1:4
+        @inbounds BUFFER_PSI_FINAL[i] = BUFFER_PSI_ATAQUE[i] / norma_tras_ataque
+    end
+
+    val_B_inicial = (BUFFER_PSI_INICIAL[2]^2) + (BUFFER_PSI_INICIAL[4]^2)
+    val_B_final   = (BUFFER_PSI_FINAL[2]^2)   + (BUFFER_PSI_FINAL[4]^2)
+
     return abs(val_B_final - val_B_inicial)
 end
 
 function ejecutar_rsi_learning()
-    # Parámetros del Meta-Gradiente
     lr = 0.1
     max_epocas = 50
     opt_coupling = WEINBERG_INICIAL
-    
-    println("🏋️ Optimizando Acoplamiento mediante Gradiente de Consistencia Estricta:")
-    println("----------------------------------------------------------------------")
-    @printf("%-10s | %-20s | %-15s | %-10s\n", "Época", "Weinberg (Coupling)", "Delta Calculado", "Pérdida")
-    println("----------------------------------------------------------------------")
-    
-    for epoca in 1:max_epocas
-        # Evaluación del estado actual
-        delta_actual = evaluar_tep(opt_coupling)
-        loss = (delta_actual - TARGET_DELTA)^2
-        
-        # Filtro de Anomalías / Detección de errores antes de la recursión (Filtro Anti-Errores RSI)
-        if isnan(loss) || isinf(loss) || delta_actual > 1.0
-            println("[ANOMALÍA DETECTADA] Operación inestable descartada. Deteniendo propagación.")
-            break
-        end
-        
-        # Calcular gradiente numérico local (Aproximación de primer orden)
-        h = 1e-5
-        delta_plus = evaluar_tep(opt_coupling + h)
-        loss_plus = (delta_plus - TARGET_DELTA)^2
-        gradiente = (loss_plus - loss) / h
-        
-        # Actualización de Meta-Learning (Filtro recursivo sin almacenamiento)
-        opt_coupling -= lr * gradiente
-        opt_coupling = max(0.0, min(1.0, opt_coupling)) # Restricción del espacio unitario
-        
-        if epoca % 10 == 0 || loss < 1e-8
-            @printf("Epoch %-5d | w_coupling: %.8f | Delta: %.6f | Loss: %.2e\n", 
-                    epoca, opt_coupling, delta_actual, loss)
-        end
-        
-        if loss < 1e-8
-            println("\n[RSI SUCCESS] Convergencia óptima alcanzada sin almacenamiento residual de logs.")
-            break
+
+    @time begin
+        for epoca in 1:max_epocas
+            delta_actual = evaluar_tep_soberano(opt_coupling)
+            loss = (delta_actual - TARGET_DELTA)^2
+
+            if isnan(loss) || isinf(loss) || delta_actual > 1.0
+                break
+            end
+
+            h = 1e-5
+            delta_plus = evaluar_tep_soberano(opt_coupling + h)
+            loss_plus = (delta_plus - TARGET_DELTA)^2
+            gradiente = (loss_plus - loss) / h
+
+            opt_coupling -= lr * gradiente
+            opt_coupling = max(0.0, min(1.0, opt_coupling))
+
+            if loss < 1e-8
+                println("[RSI SUCCESS] Convergencia alcanzada.")
+                break
+            end
         end
     end
-    
-    println("\n======================================================================")
-    println(" ESTADO DE UNIFICACIÓN: SOVEREIGN_OPERATIONAL")
-    println("======================================================================")
 end
 
+println("======================================================================")
+println("--- PASADA 1: Con sobrecarga de compilación JIT ---")
+println("======================================================================")
+ejecutar_rsi_learning()
+
+println("\n======================================================================")
+println("--- PASADA 2: Métricas nativas del motor en caliente (0-ALLOC) ---")
+println("======================================================================")
 ejecutar_rsi_learning()
