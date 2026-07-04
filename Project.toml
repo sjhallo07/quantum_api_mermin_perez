@@ -1,0 +1,3 @@
+[deps]
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+Sockets = "6462fe0b-24de-5631-8697-dd941f90decc"
