@@ -22,3 +22,20 @@ pipeline:
 	@julia generar_qubits.jl
 	@echo "\n=== PROYECTANDO REQUISITOS EN ESPACIO DE HILBERT ==="
 	@julia sudoku_25x25.jl challenge
+
+np-challenge:
+	@julia sudoku_p_vs_np.jl
+
+sat-reduction:
+	@julia sudoku_sat_reduction.jl
+
+pow-verify:
+	@julia -t auto bitcoin_pow_verify.jl
+
+run-armor:
+	@chmod +x armadura_ckpool.py
+	@python3 armadura_ckpool.py
+
+run-armor:
+	@chmod +x armadura_ckpool.py
+	@python3 armadura_ckpool.py
