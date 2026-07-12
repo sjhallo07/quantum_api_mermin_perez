@@ -1,0 +1,77 @@
+==========================================================
+   REPORTE DE RÁFAGA: AUDITORÍA TOTAL DE ARCHIVOS JULIA   
+   Fecha y Hora: Sun Jul 12 00:08:20 -04 2026                                 
+==========================================================
+
+[✅ OK] alice.jl - Tiempo: 4.836s
+[✅ OK] alice_anonimo.jl - Tiempo: .4211s
+[✅ OK] alice_bob_matrices.jl - Tiempo: 5.530s
+[✅ OK] alice_master.jl - Tiempo: 1.432s
+[✅ OK] api_algebraica.jl - Tiempo: .7192s
+[✅ OK] bitcoin_pow_verify.jl - Tiempo: 3.323s
+[✅ OK] bob.jl - Tiempo: 2.423s
+[✅ OK] certificar_resoluciones.jl - Tiempo: .8199s
+[✅ OK] communication.jl - Tiempo: 1.818s
+[✅ OK] densidad.jl - Tiempo: 2.044s
+[✅ OK] desafio_quantum.jl - Tiempo: .9328s
+[✅ OK] detector_integridad.jl - Tiempo: .5251s
+[✅ OK] dialogo_determinista.jl - Tiempo: 2.099s
+[✅ OK] generador_manifiesto.jl - Tiempo: 1.132s
+[✅ OK] generador_manifiesto_final.jl - Tiempo: .6208s
+[✅ OK] ibm_zne_mitigation.jl - Tiempo: 2.640s
+[✅ OK] integracion.jl - Tiempo: 4.435s
+[✅ OK] key_finder.jl - Tiempo: 1.523s
+[✅ OK] mecanica_pura.jl - Tiempo: 5.435s
+[✅ OK] mermin_peres.jl - Tiempo: 4.134s
+[✅ OK] mermin_peres_real.jl - Tiempo: 1.222s
+[✅ OK] meta_learning_tep.jl - Tiempo: 1.035s
+[✅ OK] metalearning_integration.jl - Tiempo: 3.731s
+[✅ OK] minero_ramanujan.jl - Tiempo: 4.030s
+[✅ OK] p_vs_np_simulation.jl - Tiempo: 2.727s
+[✅ OK] polchinski_breach.jl - Tiempo: 3.628s
+[✅ OK] polchinski_real.jl - Tiempo: 4.130s
+[✅ OK] polyakov_action.jl - Tiempo: 3.430s
+[✅ OK] pow_miner.jl - Tiempo: 2.524s
+[❌ ERROR] puerto_cuantico_bell.jl - Código de salida: 137
+[✅ OK] qre_agente_kitaev.jl - Tiempo: 5.840s
+[✅ OK] qre_entropy_collapse.jl - Tiempo: 5.661s
+[✅ OK] qre_heavy_stress.jl - Tiempo: 8.158s
+[✅ OK] qre_ibm_fidelity.jl - Tiempo: 4.727s
+[✅ OK] qre_kitaev_corrector.jl - Tiempo: 3.925s
+[✅ OK] qre_pure_brain.jl - Tiempo: 2.324s
+[✅ OK] ramanujan_omega_million.jl - Tiempo: .4214s
+[✅ OK] resolver_reto.jl - Tiempo: 2.125s
+[✅ OK] script_B.jl - Tiempo: 1.624s
+[✅ OK] sellar_matriz.jl - Tiempo: 1.226s
+[✅ OK] sellar_qre.jl - Tiempo: .7187s
+[✅ OK] sellar_resultados.jl - Tiempo: 1.319s
+[❌ ERROR] stress_quantum_8d.jl - Código de salida: 1
+[⏳ TIMEOUT] submit_chamberlain.jl - El script se colgó (Bucle infinito o Servidor de escucha)
+[✅ OK] sudoku_25.jl - Tiempo: 6.932s
+[✅ OK] sudoku_25x25.jl - Tiempo: 2.025s
+[✅ OK] sudoku_p_vs_np.jl - Tiempo: 2.230s
+[✅ OK] sudoku_sat_reduction.jl - Tiempo: 1.123s
+[❌ ERROR] swampland_bridge_v2.jl - Código de salida: 1
+[✅ OK] swampland_bridge_v3.jl - Tiempo: 2.523s
+[✅ OK] swampland_bridge_v4.jl - Tiempo: 3.423s
+[✅ OK] swampland_ruta_a.jl - Tiempo: 5.328s
+[✅ OK] swampland_ruta_b.jl - Tiempo: 3.928s
+[✅ OK] swampland_test.jl - Tiempo: .6186s
+[✅ OK] tep_reality_check.jl - Tiempo: 1.624s
+[✅ OK] tep_unified.jl - Tiempo: 4.928s
+[✅ OK] tepe_interference.jl - Tiempo: 5.427s
+[✅ OK] termux_qaoa_analitico.jl - Tiempo: 4.024s
+[⏳ TIMEOUT] termux_vs_ibm.jl - El script se colgó (Bucle infinito o Servidor de escucha)
+[✅ OK] test_escalabilidad.jl - Tiempo: 2.440s
+[✅ OK] test_learning.jl - Tiempo: 1.126s
+[✅ OK] validar_calculo.jl - Tiempo: 2.245s
+[✅ OK] verificador_nonce.jl - Tiempo: .8264s
+[✅ OK] verificar_qre.jl - Tiempo: .7358s
+[✅ OK] verificar_target_real.jl - Tiempo: .6187s
+
+==========================================================
+                    RESUMEN DE TELEMETRÍA                  
+  Total de archivos analizados: 65
+  Scripts estables (Éxito): 60
+  Scripts inestables (Fallo/Timeout): 5
+==========================================================
