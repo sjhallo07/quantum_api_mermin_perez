@@ -2,7 +2,7 @@
 
 julia_version = "1.12.6"
 manifest_format = "2.0"
-project_hash = "ef19f2bbe4e99cdb287b3bb602978e8fa2fb0389"
+project_hash = "f248f6d400d50f373c0f99a72c9dce36e63e9149"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "d9aaef7c63466eee4de23b4d9dad03629df54bea"
@@ -1488,3 +1488,9 @@ version = "2022.3.0+0"
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
 uuid = "3f19e933-33d8-53b3-aaab-bd5110c3b7a0"
 version = "17.7.0+0"
+
+[[deps.quantum_api_mermin_perez]]
+deps = ["DifferentialEquations", "Distributions", "Optim", "Sockets"]
+path = "."
+uuid = "6a9f0e1f-5e96-4f1c-9f88-0afc5a70b5ed"
+version = "0.1.0"

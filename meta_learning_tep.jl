@@ -1,8 +1,8 @@
+using .Ecosistema
 include("soberania_absoluta.jl")
 using LinearAlgebra
 using Printf
 
-const MATRIZ_SOBERANA_5D = Float64[
     -1.0  0.0  0.0  0.0  0.0;
      0.0  1.0  0.0  0.0  0.0;
      0.0  0.0  1.0  0.0  0.0;
@@ -10,10 +10,8 @@ const MATRIZ_SOBERANA_5D = Float64[
      0.0  0.0  0.0  0.0  1.0
 ]
 
-const MATRIZ_DENSIDAD_4x4 = Float64[
 
 # --- INYECCIÓN GLOBAL 8D (Evita truncamiento de q6, q7, q8) ---
-const MATRIZ_DENSIDAD_8x8 = Float64[
     0.110  0.030  0.050  0.020  0.050  0.040  0.030  0.030;
     0.030  0.130  0.060  0.020  0.060  0.050  0.040  0.040;
     0.050  0.060  0.150  0.030  0.080  0.060  0.050  0.050;
@@ -37,7 +35,7 @@ const BUFFER_PSI_ATAQUE  = zeros(4)
 const BUFFER_PSI_FINAL   = zeros(4)
 
 function evaluar_tep_soberano(weinberg_coupling)
-    factor_soberano = abs(MATRIZ_SOBERANA_5D[1,1])
+    factor_soberano = abs(Ecosistema.METRICA_SOBERANA_5D[1,1])
     
     BUFFER_PSI_ATAQUE[1] = BUFFER_PSI_INICIAL[1] * factor_soberano
     BUFFER_PSI_ATAQUE[2] = BUFFER_PSI_INICIAL[2] * factor_soberano
