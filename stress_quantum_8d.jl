@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 using LinearAlgebra
 using UnicodePlots
 

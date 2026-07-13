@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 using LinearAlgebra
 
 # === MATRIZ SOBERANA (Fondo Neutro 5D) ===

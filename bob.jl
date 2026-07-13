@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 using LinearAlgebra
 
 # La misma definición del protocolo (La Verdad local de Bob)

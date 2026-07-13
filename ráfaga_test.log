@@ -1,0 +1,391 @@
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+--- ALICE: Verificando Consistencia ---
+Fila 1: Correcta (+I)
+Fila 2: Correcta (+I)
+Fila 3: Correcta (+I)
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+--- BOB: Observación Independiente ---
+Columna 1: Correcta (±I)
+Columna 2: Correcta (±I)
+Columna 3: Correcta (±I)
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+=============================================================
+👑   ALICE - EMISOR MASTER ROYAL (ALCANCE INTEGRADO)   👑
+=============================================================
+[Alice] Factor entrópico del procesador móvil: 0.56
+[Alice] Firma dinámica esperada en el ordenador: 2.52
+
+⚠️ [FALLBACK ACTIVADO] Redirigiendo de forma segura al motor Python de rescate...
+❌ [Fallback] Error crítico interno: [Errno 1] Operation not permitted: '/sdcard/puerto_cuantico.raw'
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+=====================================================================
+🌀 ENGINE CUÁNTICO ACTIVADO: API Algebraica de Mermin-Peres
+=====================================================================
+-> API cargada correctamente en el entorno local.
+-> Usa la función: solicitar_calculo("fila" o "columna", 1-3)
+=====================================================================
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+======================================================================
+   AUDITORÍA SOBERANA QRE: DIAGNÓSTICO DE CONOCIMIENTO Y HARDWARE     
+======================================================================
+
+🛡️  1. MÉTRICAS DE SOBERANÍA DE HARDWARE (SILICIO INDEPENDIENTE):
+----------------------------------------------------------------------
+• Fricción / Asignación en RAM Dinámica: 0 bytes
+• Tiempo de Respuesta Local en CPU:       0.000001 segundos
+• Índice de Autonomía de Ejecución:       100.00%
+  [ESTADO]: 0-ALLOC BLINDADO. El código corre en registros, inaccesible a telemetría externa.
+
+🧠 2. AUDITORÍA EPISTÉMICA (¿Qué sabe y qué ha aprendido el motor?):
+----------------------------------------------------------------------
+• Parámetro Interno Consolidado (Weinberg): 0.44814735
+• Objetivo de la Simulación (Target):        0.332838
+• Respuesta Matemática del Motor:           0.332753
+• Desviación de Consistencia (Loss):        7.20e-09
+• Densidad de Certeza Cognitiva:            27.05 bits de precisión
+
+📊 3. ESTADO DE ACTIVACIÓN VECTORIAL (Fase II):
+----------------------------------------------------------------------
+• Vector de Estado Final en Memoria Cache (Psi): [0.0000, 0.9126, -0.4090, 0.0000]
+• Coherencia Unitaria del Espacio:          1.000000 (Debe ser exactamente 1.0)
+  [DIAGNÓSTICO]: COGNICIÓN ESTABLE. No hay ruido estocástico ni alucinación por engagement.
+======================================================================
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+🔮 === ACTIVANDO ENGINE: MODO QUANTUM ===
+
+📡 [PUERTO OPTIMIZADO]: Amplitud de Interferencia: 1.202000
+🔐 [PARIDAD TOPOLÓGICA]: Valor del Pivote Soberano: -1.0
+✅ ENGINE STATUS: Canal de entrelazamiento ABIERTO y ALINEADO.
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+-0.12019999999999995
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+=== MODO DE SELECCIÓN DE ENTORNO ===
+Para ejecutar Alice: export PROCESO_ROL=ALICE && julia mermin_peres_real.jl
+Para ejecutar Bob:   export PROCESO_ROL=BOB   && julia mermin_peres_real.jl
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+ERROR: LoadError: DimensionMismatch: argument 5 has a mismatched number of elements along axis 2; expected 5, got 1
+Stacktrace:
+ [1] _typed_hvncat_shape(::Type{Float64}, shape::Tuple{NTuple{5, Int64}, Tuple{Int64}}, row_first::Bool, as::Tuple{Matrix{Float64}, Vararg{Float64, 16}})
+   @ Base ./abstractarray.jl:2679
+ [2] _typed_hvncat(::Type, ::Tuple{NTuple{5, Int64}, Tuple{Int64}}, ::Bool, ::Matrix{Float64}, ::Vararg{Any})
+   @ Base ./abstractarray.jl:2629
+ [3] typed_hvncat(::Type, ::Tuple{NTuple{5, Int64}, Tuple{Int64}}, ::Bool, ::Matrix{Float64}, ::Vararg{Any})
+   @ Base ./abstractarray.jl:2351
+ [4] typed_hvcat(::Type{Float64}, ::NTuple{5, Int64}, ::Matrix{Float64}, ::Vararg{Any})
+   @ Base ./abstractarray.jl:2251
+ [5] top-level scope
+   @ /tmp/quantum_api_mermin_perez/meta_learning_tep.jl:13
+ [6] include(mod::Module, _path::String)
+   @ Base ./Base.jl:306
+ [7] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:317
+ [8] _start()
+   @ Base ./client.jl:550
+in expression starting at /tmp/quantum_api_mermin_perez/meta_learning_tep.jl:13
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+=== metalearning_integration.jl ===
+
+@allocated: delta_qre=0  delta_cor=0 bytes
+
+--- COMPARISON ---
+property                    original_QRE      corrected       
+------------------------------------------------------------
+operator                    diag(1,1,w,w)     diag(s1,s1,1,1) 
+observable                  |psi2|^2+|psi4|^2  <sz>_B via I2xsz
+val_B_initial               0.500000          0.000000        
+solution_w                  1/sqrt(5)~0.4472  1.0 exact       
+loss at solution            2.7733e-32        1.2326e-32      
+loss at WEINBERG_INICIAL    1.1706e-07        1.2326e-32      
+
+
+QRE_original  w0=0.44856123  target=0.3328380000
+ep    w               delta           loss        
+1     0.4485399535    0.3324958584    1.1706e-07  
+2     0.4485194998    0.3325090870    1.0818e-07  
+3     0.4484998370    0.3325218038    9.9980e-08  
+4     0.4484809346    0.3325340287    9.2399e-08  
+5     0.4484627630    0.3325457806    8.5392e-08  
+6     0.4484452941    0.3325570781    7.8917e-08  
+7     0.4484285006    0.3325679385    7.2933e-08  
+8     0.4484123564    0.3325783789    6.7403e-08  
+9     0.4483968363    0.3325884156    6.2292e-08  
+10    0.4483819162    0.3325980641    5.7569e-08  
+11    0.4483675729    0.3326073394    5.3204e-08  
+12    0.4483537841    0.3326162562    4.9170e-08  
+13    0.4483405283    0.3326248281    4.5442e-08  
+14    0.4483277849    0.3326330686    4.1997e-08  
+15    0.4483155340    0.3326409905    3.8813e-08  
+16    0.4483037567    0.3326486061    3.5870e-08  
+17    0.4482924346    0.3326559273    3.3150e-08  
+18    0.4482815502    0.3326629654    3.0637e-08  
+19    0.4482710863    0.3326697315    2.8314e-08  
+20    0.4482610270    0.3326762360    2.6168e-08  
+  result: w=0.448261026951  delta=0.332682489074  err=1.5551e-04  conv=false
+
+QRE_exact_target  w0=0.50000000  target=0.3333333333
+ep    w               delta           loss        
+1     0.4978666625    0.3000000000    1.1111e-03  
+2     0.4958224417    0.3013647475    1.0220e-03  
+3     0.4938634493    0.3026713586    9.4016e-04  
+4     0.4919859729    0.3039224298    8.6500e-04  
+5     0.4901864679    0.3051204388    7.9597e-04  
+6     0.4884615504    0.3062677492    7.3255e-04  
+7     0.4868079899    0.3073666157    6.7427e-04  
+8     0.4852227024    0.3084191885    6.2071e-04  
+9     0.4837027438    0.3094275182    5.7149e-04  
+10    0.4822453033    0.3103935604    5.2623e-04  
+11    0.4808476973    0.3113191795    4.8462e-04  
+12    0.4795073637    0.3122061537    4.4636e-04  
+13    0.4782218557    0.3130561785    4.1116e-04  
+14    0.4769888371    0.3138708707    3.7879e-04  
+15    0.4758060764    0.3146517724    3.4900e-04  
+16    0.4746714425    0.3154003541    3.2159e-04  
+17    0.4735828994    0.3161180186    2.9637e-04  
+18    0.4725385023    0.3168061040    2.7315e-04  
+19    0.4715363926    0.3174658871    2.5178e-04  
+20    0.4705747946    0.3180985859    2.3210e-04  
+  result: w=0.470574794586  delta=0.318705362719  err=1.4628e-02  conv=false
+
+corrected_szB  w0=1.00000000  target=0.3333333333
+ep    w               delta           loss        
+1     0.9999999842    0.3333333333    1.2326e-32  
+  converged ep=1
+  result: w=0.999999984198  delta=0.333333319287  err=1.4047e-08  conv=true
+
+--- KEY INSIGHT ---
+1/sqrt(5)      = 0.447213595500  <- QRE solution
+w=1.0          = 1.000000000000  <- corrected solution
+both give delta=1/3 but via DIFFERENT operators and observables
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+ERROR: LoadError: ArgumentError: Package HTTP not found in current path.
+- Run `import Pkg; Pkg.add("HTTP")` to install the HTTP package.
+Stacktrace:
+ [1] macro expansion
+   @ ./loading.jl:2405 [inlined]
+ [2] macro expansion
+   @ ./lock.jl:376 [inlined]
+ [3] __require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:2388
+ [4] require(into::Module, mod::Symbol)
+   @ Base ./loading.jl:2364
+ [5] include(mod::Module, _path::String)
+   @ Base ./Base.jl:306
+ [6] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:317
+ [7] _start()
+   @ Base ./client.jl:550
+in expression starting at /tmp/quantum_api_mermin_perez/orquestador.jl:2
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+Checking and installing script dependencies...
+  Activating new project at `/tmp/jl_hU11Qi`
+   Resolving package versions...
+   Installed PooledArrays ──────── v1.4.3
+   Installed SentinelArrays ────── v1.4.10
+   Installed Parsers ───────────── v2.8.6
+   Installed TableTraits ───────── v1.0.1
+   Installed Tables ────────────── v1.13.0
+   Installed InlineStrings ─────── v1.4.5
+   Installed CSV ───────────────── v0.10.16
+   Installed DataValueInterfaces ─ v1.0.0
+   Installed LaTeXStrings ──────── v1.4.0
+   Installed WorkerUtilities ───── v1.6.1
+   Installed InvertedIndices ───── v1.3.1
+   Installed FilePathsBase ─────── v0.9.24
+   Installed TranscodingStreams ── v0.11.3
+   Installed PrettyTables ──────── v3.4.0
+   Installed CodecZlib ─────────── v0.7.8
+   Installed WeakRefStrings ────── v1.4.3
+   Installed DataFrames ────────── v1.8.2
+   Installed StringManipulation ── v0.4.4
+  Installing 1 artifacts
+   Installed artifact testfiles 6.2 MiB
+    Updating `/tmp/jl_hU11Qi/Project.toml`
+  [336ed68f] + CSV v0.10.16
+  [a93c6f00] + DataFrames v1.8.2
+    Updating `/tmp/jl_hU11Qi/Manifest.toml`
+  [336ed68f] + CSV v0.10.16
+  [944b1d66] + CodecZlib v0.7.8
+  [34da2185] + Compat v4.18.1
+  [a8cc5b0e] + Crayons v4.1.1
+  [9a962f9c] + DataAPI v1.16.0
+  [a93c6f00] + DataFrames v1.8.2
+  [864edb3b] + DataStructures v0.19.5
+  [e2d170a0] + DataValueInterfaces v1.0.0
+  [48062228] + FilePathsBase v0.9.24
+  [842dd82b] + InlineStrings v1.4.5
+  [41ab1584] + InvertedIndices v1.3.1
+  [82899510] + IteratorInterfaceExtensions v1.0.0
+  [b964fa9f] + LaTeXStrings v1.4.0
+  [e1d29d7a] + Missings v1.2.0
+⌅ [bac558e1] + OrderedCollections v1.8.2
+  [69de0a69] + Parsers v2.8.6
+  [2dfb63ee] + PooledArrays v1.4.3
+  [aea7be01] + PrecompileTools v1.3.4
+  [21216c6a] + Preferences v1.5.2
+  [08abe8d2] + PrettyTables v3.4.0
+  [189a3867] + Reexport v1.2.2
+  [91c51154] + SentinelArrays v1.4.10
+  [a2af1166] + SortingAlgorithms v1.2.3
+  [10745b16] + Statistics v1.11.1
+  [892a3eda] + StringManipulation v0.4.4
+  [3783bdb8] + TableTraits v1.0.1
+  [bd369af6] + Tables v1.13.0
+  [3bb67fe8] + TranscodingStreams v0.11.3
+  [ea10d353] + WeakRefStrings v1.4.3
+  [76eceee3] + WorkerUtilities v1.6.1
+  [56f22d72] + Artifacts v1.11.0
+  [2a0f44e3] + Base64 v1.11.0
+  [ade2ca70] + Dates v1.11.0
+  [9fa8497b] + Future v1.11.0
+  [b77e0a4c] + InteractiveUtils v1.11.0
+  [ac6e5ff7] + JuliaSyntaxHighlighting v1.12.0
+  [8f399da3] + Libdl v1.11.0
+  [37e2e46d] + LinearAlgebra v1.12.0
+  [d6f4376e] + Markdown v1.11.0
+  [a63ad114] + Mmap v1.11.0
+  [de0858da] + Printf v1.11.0
+  [3fa0cd96] + REPL v1.11.0
+  [9a3f8284] + Random v1.11.0
+  [ea8e919c] + SHA v0.7.0
+  [6462fe0b] + Sockets v1.11.0
+  [f489334b] + StyledStrings v1.11.0
+  [fa267f1f] + TOML v1.0.3
+  [cf7118a7] + UUIDs v1.11.0
+  [4ec0a83e] + Unicode v1.11.0
+  [e66e0078] + CompilerSupportLibraries_jll v1.3.0+1
+  [4536629a] + OpenBLAS_jll v0.3.29+0
+  [83775a58] + Zlib_jll v1.3.1+2
+  [8e850b90] + libblastrampoline_jll v5.15.0+0
+        Info Packages marked with ⌅ have new versions available but compatibility constraints restrict them from upgrading. To see why use `status --outdated -m`
+Precompiling packages...
+   1491.1 ms  ✓ DataValueInterfaces
+   1440.6 ms  ✓ TableTraits
+   1857.2 ms  ✓ LaTeXStrings
+   1867.0 ms  ✓ InvertedIndices
+   2139.8 ms  ✓ PooledArrays
+   2355.6 ms  ✓ WorkerUtilities
+   2612.5 ms  ✓ TranscodingStreams
+   2916.8 ms  ✓ InlineStrings
+   1478.1 ms  ✓ CodecZlib
+   4567.7 ms  ✓ SentinelArrays
+   3249.6 ms  ✓ FilePathsBase
+   1635.7 ms  ✓ FilePathsBase → FilePathsBaseMmapExt
+   5591.3 ms  ✓ StringManipulation
+   5763.2 ms  ✓ Tables
+  17657.0 ms  ✓ Parsers
+    955.9 ms  ✓ InlineStrings → ParsersExt
+   1829.3 ms  ✓ WeakRefStrings
+  62229.9 ms  ✓ CSV
+  81066.8 ms  ✓ PrettyTables
+  98802.2 ms  ✓ DataFrames
+  20 dependencies successfully precompiled in 188 seconds. 28 already precompiled.
+[2026-07-13T03:11:48.654] INFO: Running Pre-flight Check...
+[2026-07-13T03:11:54.462] SUCCESS: FASTA vs Table ID intersection = 3 / 3 (Full match).
+[2026-07-13T03:11:56.499] WARNING: PICRUSt2 environment not found. Initiating Miniforge deployment...
+[2026-07-13T03:11:56.500] INFO: Downloading Miniforge from GitHub Releases...
+[2026-07-13T03:11:57.463] INFO: Installing Miniforge silently to /root/miniforge3...
+miniforge.sh: line 9: syntax error near unexpected token `newline'
+miniforge.sh: line 9: `<!DOCTYPE html>'
+ERROR: LoadError: failed process: Process(`bash miniforge.sh -b -p /root/miniforge3`, ProcessExited(2)) [2]
+
+Stacktrace:
+ [1] pipeline_error
+   @ ./process.jl:597 [inlined]
+ [2] run(::Cmd; wait::Bool)
+   @ Base ./process.jl:512
+ [3] run(::Cmd)
+   @ Base ./process.jl:509
+ [4] top-level scope
+   @ /tmp/quantum_api_mermin_perez/pipeline.jl:74
+ [5] include(mod::Module, _path::String)
+   @ Base ./Base.jl:306
+ [6] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:317
+ [7] _start()
+   @ Base ./client.jl:550
+in expression starting at /tmp/quantum_api_mermin_perez/pipeline.jl:64
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+Precompiling packages...
+   1021.2 ms  ✓ ConstructionBaseStaticArraysExt (serial)
+  1 dependency successfully precompiled in 1 seconds
+Precompiling packages...
+    943.8 ms  ✓ StaticArraysExt (serial)
+  1 dependency successfully precompiled in 1 seconds
+Precompiling packages...
+    954.7 ms  ✓ FillArraysStaticArraysExt (serial)
+  1 dependency successfully precompiled in 1 seconds
+Precompiling packages...
+    896.8 ms  ✓ SpecialFunctionsExt (serial)
+  1 dependency successfully precompiled in 1 seconds
+======================================================================
+   🚀 HIGH-STRESS 8D (3-QUBIT) LOCAL QUANTUM ENGINE SOBERANO 🚀
+======================================================================
+
+[RENDIMIENTO DE TU SILICIO ARM]
+-> Tiempo de mitigación neto: 508.04 microsegundos
+-> ¿Éxito total ante el ruido criogénico?: true
+
+--- MAGNITUD ABSOLUTA DEL VECTOR RECUPERADO (ESTADO_SANO) ---
+      ┌                                        ┐ 
+   q1 ┤■■■■ 0.100511                             
+   q2 ┤■■■■■■■■■■■■ 0.301534                     
+   q3 ┤■■■■■■■■■■■■■■■■■■■ 0.502557              
+   q4 ┤■■■■■■■■ 0.201023                         
+   q5 ┤■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 0.778461   
+   q6 ┤ 1.98591e⁻¹⁷                              
+   q7 ┤ 5.04919e⁻¹⁷                              
+   q8 ┤ 5.12071e⁻¹⁷                              
+      └                                        ┘ 
+======================================================================
