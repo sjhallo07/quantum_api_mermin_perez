@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.7.12)  12 JUL 2026 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2026.7.12)  12 JUL 2026 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -195,7 +195,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box52
 )
-No file manifesto_final_qre.aux.
+(./manifesto_final_qre.aux)
 \openout1 = `manifesto_final_qre.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -216,6 +216,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -251,6 +252,7 @@ LaTeX Font Info:    ... okay on input line 6.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 6.
+(./manifesto_final_qre.out) (./manifesto_final_qre.out)
 \@outlinefile=\write3
 \openout3 = `manifesto_final_qre.out'.
 
@@ -259,21 +261,39 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 11.
 
-Overfull \hbox (127.3502pt too wide) in paragraph at lines 17--18
+Overfull \hbox (15.38937pt too wide) in paragraph at lines 15--16
+\OT1/cmr/m/n/12 dos per-ma-nen-te-mente a la pub-li-caci^^Son cient^^S^^Pfica m
+e-di-ante el DOI per-ma-nente: []\OT1/cmr/bx/n/12 10.5281/zen-
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 20.
+
+Overfull \hbox (127.3502pt too wide) in paragraph at lines 28--29
 []\OT1/cmr/bx/n/12 Resoluci^^Son de la Paradoja: \OT1/cmtt/m/n/12 2e7fe9253716e
 890fb6ce12fee2783ee66ae11fd525fb64c6339e7a5eccdbd0d 
  []
 
 
-Overfull \hbox (158.91667pt too wide) in paragraph at lines 18--19
+Overfull \hbox (158.91667pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/bx/n/12 Unificaci^^Son Fase II (QRE Core): \OT1/cmtt/m/n/12 cf3f2492
 e42ec65a0e0294a12ec99c5dfbac1664d83ffa34063c40bdef3128c4 
  []
 
 
-Overfull \hbox (182.37665pt too wide) in paragraph at lines 19--20
+Overfull \hbox (182.37665pt too wide) in paragraph at lines 30--31
 []\OT1/cmr/bx/n/12 Matriz Sober-ana (Es-truc-tura Base): \OT1/cmtt/m/n/12 3909e
 35e2a62c5d5f11ed91bb6976614d10766a7e2d5e66e6fb45c461f911914 
+ []
+
+
+Overfull \hbox (129.9613pt too wide) in paragraph at lines 31--32
+[]\OT1/cmr/bx/n/12 Sello del Repos-i-to-rio Fi-nal: \OT1/cmtt/m/n/12 8e8591b5c4
+e84428a2a9d36fedd850360edff2e776ae2b3ac633fdfa17209d84 
  []
 
 
@@ -281,38 +301,35 @@ Overfull \hbox (182.37665pt too wide) in paragraph at lines 19--20
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./manifesto_final_qre.aux)
+
+[2] (./manifesto_final_qre.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-Package rerunfilecheck Warning: File `manifesto_final_qre.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `manifesto_final_qre.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `manifesto_final_qre.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8129 strings out of 475178
- 126981 string characters out of 5766539
- 529056 words of memory out of 5000000
- 31082 multiletter control sequences out of 15000+600000
- 562420 words of font info for 48 fonts, out of 8000000 for 9000
+ 8159 strings out of 475178
+ 127420 string characters out of 5766539
+ 533130 words of memory out of 5000000
+ 31098 multiletter control sequences out of 15000+600000
+ 564858 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,6n,79p,351b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,6n,79p,460b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </root/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on manifesto_final_qre.pdf (1 page, 55550 bytes).
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb>
+Output written on manifesto_final_qre.pdf (2 pages, 89016 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 65 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

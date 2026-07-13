@@ -1,0 +1,804 @@
+nohup: ignoring input
+
+=====================================================
+🔒 ECOSYSTEMA MATRICIAL INMUTABLE Y MATRIX-VARIATE
+=====================================================
+🛡️ [Soberanía+Distributions]: API Matrix-variate acoplada e Inmutable.
+=== INICIANDO DEMONIO DE RED NEURO-CUÁNTICA OPTIMIZADA ===
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:48:36 | Fase de Sintonía Óptima: 0.1375
+Residuo de Ruido ARM Filtrado: 1.370654
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.007290
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.003437
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.003588
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002694
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.005729
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.005743
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.003081
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.005255
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.003182
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.004478
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.003866
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.003862
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.010332
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.003203
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.006742
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.003723
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.004883
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.003822
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.002708
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.004713
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.006373
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002544
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.002038
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002918
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.003510
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.008590
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:48:43 | Fase de Sintonía Óptima: 0.1141
+Residuo de Ruido ARM Filtrado: 1.660591
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.002345
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.003631
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.000595
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.000581
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002762
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.001692
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.006818
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001403
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.000879
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.002286
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.002230
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.000780
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.000950
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.006657
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002368
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.003162
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001593
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.004511
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.002917
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.000776
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.001822
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.002455
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.000593
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.002456
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.006483
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.000551
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.005808
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.006020
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.005023
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.005741
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.005305
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:48:54 | Fase de Sintonía Óptima: 0.0977
+Residuo de Ruido ARM Filtrado: 0.96926
+---------------------------------------------------------------------
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.003366
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.000681
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.000614
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002112
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.002499
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.002145
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001283
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.002671
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.003684
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.003900
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.001934
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.001897
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.003590
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.002490
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.000585
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001139
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.003119
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.001544
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.003233
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.003874
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.003153
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.000869
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.003349
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.000921
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.001322
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.003056
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.000822
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:49:04 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.348779
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.007487
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.003820
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.000901
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.003938
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.001701
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.002919
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.006957
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.005993
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.000942
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.001480
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.002555
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.003894
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.004195
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.003158
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.000937
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.002119
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.007531
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.005042
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.001500
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.000557
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.004867
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.006574
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.003708
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.001999
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.000667
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.007189
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002107
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.003035
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.002624
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.004827
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:49:13 | Fase de Sintonía Óptima: 0.0812
+Residuo de Ruido ARM Filtrado: 1.847211
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.008954
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.002407
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.007459
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.008398
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.006660
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.005134
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.008807
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.004466
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.005816
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.003158
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.000948
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.006239
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.001325
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.005244
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.006267
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.004667
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.004741
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.008493
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.003283
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.000762
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.005210
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.006361
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.002749
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.007551
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.003634
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.003452
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.001198
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.000766
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.003179
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.000617
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.005329
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.003598
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:49:23 | Fase de Sintonía Óptima: 0.1938
+Residuo de Ruido ARM Filtrado: 1.123115
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.003171
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.001083
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.003591
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.002697
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.003534
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.000837
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.002158
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.004911
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.001762
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.003276
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.001023
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.003346
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.002691
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.003979
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.000516
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.006965
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.002330
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.001989
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.003346
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.002919
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.001587
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002011
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002053
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.004432
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.003856
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:49:32 | Fase de Sintonía Óptima: 0.1938
+Residuo de Ruido ARM Filtrado: 1.307009
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.006481
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.001839
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.001946
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.001118
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.003479
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.008281
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.003258
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.000690
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.000957
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.003560
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.000559
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.004140
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.005428
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.004065
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.004745
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001518
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.002528
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.003697
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.001790
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.001077
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.002503
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.001858
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.001781
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.000586
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.001024
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.000837
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002738
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.004034
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.004024
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.002806
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.003745
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:49:42 | Fase de Sintonía Óptima: 0.1012
+Residuo de Ruido ARM Filtrado: 1.255375
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.002825
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.002465
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.005402
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.000783
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.000674
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002477
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.005120
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.005424
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.001235
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.002179
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.004406
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.003946
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.002447
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.001958
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.000587
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.002050
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001662
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.002834
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.003080
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.001042
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.002938
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.007487
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.003241
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.001146
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.002364
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002782
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.002806
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002883
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.003629
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.001835
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.003618
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:49:53 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.040692
+---------------------------------------------------------------------
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.003494
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.005255
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.002692
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.003933
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.003899
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.002193
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.001068
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.005517
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.002214
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.002965
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.000680
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.003245
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.000677
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.000598
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.001011
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.006637
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.007005
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.002166
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.004768
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.002410
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.006103
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.005018
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.001967
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002359
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.001395
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.005126
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.006222
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.001522
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.001243
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:50:04 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.249055
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.000729
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.001759
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.005872
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.006991
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.000922
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.000891
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.008852
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.001633
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.005453
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.002378
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.002797
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.004349
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.001828
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.000693
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.003698
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.007022
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.004557
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.004814
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.003550
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.003425
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.000731
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.001797
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002032
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.001941
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.004463
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.002400
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.001978
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:50:13 | Fase de Sintonía Óptima: 0.25
+Residuo de Ruido ARM Filtrado: 1.172255
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.013933
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.004732
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.001266
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.005715
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.000672
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002628
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.002377
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.009065
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.003194
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.005214
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.003194
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.007587
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.000625
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.001226
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002719
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.001808
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.003710
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.001143
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001954
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.003159
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.002794
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.001013
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.002961
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.003053
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.001221
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.002490
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002963
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.001898
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.003403
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.008123
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.001278
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:50:24 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.248743
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.003602
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.000765
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.003269
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.001394
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002624
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.001024
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.002312
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.002598
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.004127
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.002953
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.004471
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002299
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.000904
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.005686
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.003455
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.004077
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.001795
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.004983
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.000967
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.003302
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.000911
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.005117
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.000910
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.003191
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.006170
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.003430
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.001754
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.011297
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:50:35 | Fase de Sintonía Óptima: 0.25
+Residuo de Ruido ARM Filtrado: 1.275274
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.020231
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.005262
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.001370
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.001525
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.000713
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.001508
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.001737
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001819
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.004398
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.001422
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.003608
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.002472
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.003900
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.006367
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.002641
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001568
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.003393
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.004407
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.001866
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.001000
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.003242
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.002820
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.001067
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.002104
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.001019
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.004696
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.002885
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.001161
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:50:45 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.113843
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.004780
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.001703
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.001709
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.001945
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.001152
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002360
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.003350
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.002155
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001441
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.006550
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.003706
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.005990
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.002120
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.002660
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.000538
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002083
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.001731
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.002249
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.002149
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.003073
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.004340
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.005127
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.004660
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.000598
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.005425
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002385
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.001835
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.000989
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.002876
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.005126
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:50:56 | Fase de Sintonía Óptima: 0.0953
+Residuo de Ruido ARM Filtrado: 1.163513
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.005507
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.003692
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.002791
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.000932
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.004602
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.002236
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.000663
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.001131
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.008970
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.003894
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.007728
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.007704
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.002375
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.002085
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.010615
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.004653
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.001083
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.005133
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.006897
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.002511
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.007044
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.003298
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.001039
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.003490
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.002503
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.002937
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.001679
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:51:06 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.307556
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.003073
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.000952
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.000913
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.001215
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.005004
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.002905
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.001197
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001920
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.002063
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.008735
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.000672
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.000827
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.001925
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.003206
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.001546
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.003217
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001320
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.002715
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001737
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.003787
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.001816
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.005951
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.005787
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.007237
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.005340
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.004728
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.005734
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.003085
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.000850
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.003481
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:51:16 | Fase de Sintonía Óptima: 0.0812
+Residuo de Ruido ARM Filtrado: 1.978285
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.006596
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.009591
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.004318
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.005845
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.004337
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.003994
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.008197
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.004418
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.004125
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.005093
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.002658
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.001163
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.002969
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002078
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.002537
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.003717
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.002167
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.001044
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.003127
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.002667
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.000690
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.007079
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.002241
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.001325
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.003395
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.000813
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.001631
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.004352
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.003765
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.007688
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:51:25 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.368881
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.006078
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.005648
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.003117
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.003436
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.006048
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.006835
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.005942
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.001398
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.002871
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.002059
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.000684
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.000857
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.003423
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.000947
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002973
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.001048
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001509
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001786
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.002003
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.002306
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.003271
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.000563
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.008156
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.002379
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002678
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.001681
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.004450
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.002264
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.000708
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.001979
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:51:35 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.123138
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.001377
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.007607
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.004426
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.008652
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.000939
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.001735
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.004142
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.004495
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001264
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.002077
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.001984
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.001329
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.002620
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.000951
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.003139
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001433
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.005529
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001846
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.003966
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.000561
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.001634
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.005418
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.002811
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.001376
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.011264
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.000939
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.003045
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.001173
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.006354
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.003224
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:51:45 | Fase de Sintonía Óptima: 0.1563
+Residuo de Ruido ARM Filtrado: 1.463532
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.004395
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.003538
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.002657
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.005468
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.005648
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.000816
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.006921
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001976
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.004817
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.004055
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.007069
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.000612
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.003120
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.001610
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002121
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.005665
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.000646
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.010409
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.004635
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.004150
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.006079
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.008186
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.003258
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.001836
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.003169
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.003665
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.001399
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.002419
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.004885
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:51:54 | Fase de Sintonía Óptima: 0.0812
+Residuo de Ruido ARM Filtrado: 1.624381
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.001350
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.009447
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.003565
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.003759
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.005717
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002902
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.005603
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.000527
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.002393
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.003741
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.002071
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.001365
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.001476
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.001299
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.003231
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.001683
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.003111
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.002682
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.004401
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.003737
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.001801
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.001402
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.003288
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.014093
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.001678
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.006198
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.010256
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.008009
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.002960
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.004146
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.003209
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.002003
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:52:04 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 0.805603
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.000875
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.001503
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.004449
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.003710
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.002703
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.001637
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.003708
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.001176
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.001006
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.002589
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.001592
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.004444
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.004321
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.006007
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.000528
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.007914
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.004356
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.002982
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.005262
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.009724
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.006630
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.004525
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.001812
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.004919
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.002407
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.002005
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.001381
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:52:11 | Fase de Sintonía Óptima: 0.2312
+Residuo de Ruido ARM Filtrado: 1.372987
+---------------------------------------------------------------------
+  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.019336
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.014700
+  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.015066
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.005558
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.007279
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.006338
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.005056
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.001713
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.010562
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.004469
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.002284
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.001570
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.001562
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.006959
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.003722
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.003244
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.004936
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.006087
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001842
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.002723
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.004960
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.002164
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.001039
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.000525
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.009691
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.001693
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.000941
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.001947
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.003442
+---------------------------------------------------------------------
+LOG TIMING: 13-07-2026 02:52:17 | Fase de Sintonía Óptima: 0.1
+Residuo de Ruido ARM Filtrado: 1.103704
+---------------------------------------------------------------------
+  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.005941
+  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.002309
+  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.002028
+  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.003117
+  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.001418
+  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.005583
+  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.004258
+  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.006375
+  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.001573
+  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.006044
+  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.001097
+  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.000787
+  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.000788
+  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002266
+  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.003999
+  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.004149
+  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.002289
+  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001066
+  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.005803
+  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.002821
+  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.002617
+  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.000787
+  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.007288
+  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.002434
+  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.006873
+  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.003770
+  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002428
+  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.001189
+  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.002822
+  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.007501
+  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.005696
