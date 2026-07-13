@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 using SHA
 
 function auditar_bloque_local_exacto()

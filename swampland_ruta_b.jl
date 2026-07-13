@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 # ==========================================
 # swampland_ruta_b.jl  —  QRE/TEP  Ruta B
 # Término cúbico γ·(φ−φ0)³ para romper Z2

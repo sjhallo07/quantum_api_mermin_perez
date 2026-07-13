@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 # ==========================================
 # swampland_ruta_a.jl  —  QRE/TEP  Ruta A
 # beta < 0: V''(phi_min) < 0 → satisface C2

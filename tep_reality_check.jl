@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 # ==============================================================================
 # tep_reality_check.jl
 # VALIDADOR: Comparativa entre Física Estándar vs. Teoría TEP

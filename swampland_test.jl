@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 # ==========================================
 # swampland_test.jl
 # Validación de la Teoría del Puente TEP

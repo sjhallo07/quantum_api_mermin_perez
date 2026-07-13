@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 using SHA
 
 function buscar_nonce_real()

@@ -1,3 +1,4 @@
+include("soberania_absoluta.jl")
 using SHA
 datos = read("qre_phase_ii.json", String)
 hash_actual = bytes2hex(sha256(datos))
