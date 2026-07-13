@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{geometry}
+
+\geometry{margin=1in}
+
+\title{Quantum API Mermin Pérez\newline Documentation Bundle}
+\author{Repository documentation}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Overview}
+This document captures the Markdown and LaTeX-oriented documentation bundle for the
+Julia workspace. The source content is aligned with the local Documenter setup and
+focuses on matrix-valued distributions and the solver workflow.
+
+\section{Matrix-variate Wishart workflow}
+The matrix-variate Wishart workflow follows the model
+\[
+X \sim \mathcal{W}_p(n, \Sigma)
+\]
+where $p = 8$ and $\Sigma$ is the positive-definite scale matrix.
+
+\begin{itemize}[leftmargin=*]
+    \item Build a scale matrix $\Sigma$.
+    \item Construct the distribution as \texttt{Wishart(9, $\Sigma$)}.
+    \item Draw samples with \texttt{rand}.
+    \item Normalize the sample by its trace.
+    \item Evaluate the score with \texttt{logpdf}.
+\end{itemize}
+
+\section{Distributions references}
+The project documentation is anchored to the JuliaStats references:
+\begin{itemize}[leftmargin=*]
+    \item \url{https://juliastats.org/Distributions.jl/stable/}
+    \item \url{https://juliastats.org/Distributions.jl/stable/matrix/}
+    \item \url{https://juliastats.org/Distributions.jl/stable/mixture/}
+    \item \url{https://juliastats.org/Distributions.jl/stable/fit/}
+\end{itemize}
+
+\section{Solver reference}
+The repository also includes a 25×25 Sudoku solver pattern that can be documented
+and rendered as part of the narrative site. The constraint system is based on the
+usual Latin-square rules:
+\[
+\forall r,c:\quad \text{cell}(r,c) \in \{1, \dots, 25\}
+\]
+
+\section{Minimal Julia example}
+\begin{lstlisting}[basicstyle=\ttfamily\small]
+using Distributions
+using LinearAlgebra
+
+M = Matrix{Float64}(I, 2, 2)
+println(tr(M))
+\end{lstlisting}
+
+\end{document}
