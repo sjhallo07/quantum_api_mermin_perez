@@ -3,37 +3,39 @@ name: Automatización y Actualización de Matrices Cuánticas
 on:
   push:
     branches:
-      - main  # Se activa cuando subes cambios a la rama main
-  workflow_dispatch: # Permite activarlo manualmente desde la web de GitHub
+      - main
+  workflow_dispatch:
+
+# Otorgamos permisos para que el workflow pueda escribir cambios en el repositorio
+permissions:
+  contents: write
 
 jobs:
   run-julia:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Copiar el código del repositorio al servidor virtual de GitHub
     - name: Checkout del código
       uses: actions/checkout@v4
 
-    # 2. Instalar y configurar Julia en el servidor virtual
     - name: Configurar entorno de Julia
       uses: julia-actions/setup-julia@v2
       with:
-        version: '1.10' # Puedes cambiarlo a tu versión exacta de Julia
+        version: '1.10'
 
-    # 3. Instalar las dependencias de tu proyecto (Pkg.instantiate)
     - name: Instalar dependencias del proyecto
       run: |
         julia --project=. -e 'import Pkg; Pkg.instantiate()'
 
-    # 4. Ejecutar tu script de extracción
     - name: Ejecutar Extracción de Matrices
       run: |
         julia extraer_matrices.jl
 
-    # 5. (Opcional) Si tu script genera un archivo de salida, puedes guardarlo en GitHub
-    # - name: Subir reporte como artefacto
-    #   uses: actions/upload-artifact@v4
-    #   with:
-    #     name: reporte-matrices
-    #     path: matrices_output.json
+    # PASO NUEVO: Si el JSON cambió, el bot de GitHub hace un commit automático de vuelta
+    - name: Autoguardar matriz actualizada en el repositorio
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@://github.com"
+        git add matrices_output.json
+        # Solo hace commit si el archivo realmente cambió para evitar bucles
+        git diff --quiet && git diff --staged --quiet || (git commit -m "chore: actualización automática de matrices [skip ci]" && git push)
