@@ -1,0 +1,39 @@
+name: Automatización y Actualización de Matrices Cuánticas
+
+on:
+  push:
+    branches:
+      - main  # Se activa cuando subes cambios a la rama main
+  workflow_dispatch: # Permite activarlo manualmente desde la web de GitHub
+
+jobs:
+  run-julia:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Copiar el código del repositorio al servidor virtual de GitHub
+    - name: Checkout del código
+      uses: actions/checkout@v4
+
+    # 2. Instalar y configurar Julia en el servidor virtual
+    - name: Configurar entorno de Julia
+      uses: julia-actions/setup-julia@v2
+      with:
+        version: '1.10' # Puedes cambiarlo a tu versión exacta de Julia
+
+    # 3. Instalar las dependencias de tu proyecto (Pkg.instantiate)
+    - name: Instalar dependencias del proyecto
+      run: |
+        julia --project=. -e 'import Pkg; Pkg.instantiate()'
+
+    # 4. Ejecutar tu script de extracción
+    - name: Ejecutar Extracción de Matrices
+      run: |
+        julia extraer_matrices.jl
+
+    # 5. (Opcional) Si tu script genera un archivo de salida, puedes guardarlo en GitHub
+    # - name: Subir reporte como artefacto
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: reporte-matrices
+    #     path: matrices_output.json
