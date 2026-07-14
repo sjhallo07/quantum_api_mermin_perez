@@ -1,101 +1,91 @@
 module Ecosistema
-    using LinearAlgebra
-    using Distributions
-    
-    export IDENTIDAD_8X8, PAULI_X, PAULI_Z, OPERADOR_ESPIN, ESTABILIZADOR_AV, ESTABILIZADOR_BP, GL, DISTRIBUCION_BASE, METRICA_SOBERANA_5D, DENSIDAD_4X4
-    
-    # Base Maestro
-    const IDENTIDAD_8X8 = Matrix{Float64}(I, 8, 8)
-    const GL = 9
-    const DISTRIBUCION_BASE = Wishart(GL, IDENTIDAD_8X8)
-    
-    # Operadores
-    const I2 = Matrix{Float64}(I, 2, 2)
-    const X2 = Float64[0 1; 1 0]
-    const Z2 = Float64[1 0; 0 -1]
-    const PAULI_X = kron(X2, kron(X2, X2))
-    const PAULI_Z = kron(Z2, kron(Z2, Z2))
-    const OPERADOR_ESPIN = kron(I2, Z2)
-    const ESTABILIZADOR_AV = kron(X2, X2)
-    const ESTABILIZADOR_BP = kron(Z2, Z2)
-    
-    # Métricas de Aprendizaje (Previamente dispersas)
-    const METRICA_SOBERANA_5D = Float64[-1 0 0 0 0; 0 1 0 0 0; 0 0 1 0 0; 0 0 0 1 0; 0 0 0 0 1]
-    const DENSIDAD_4X4 = Float64[0.25 0.35 0.26 0.251; 0.35 0.25 0.35 0.26; 0.26 0.35 0.25 0.35; 0.251 0.26 0.35 0.25]
 
-# --- INTEGRACIÓN AUTOMÁTICA DE ARCHIVOS DEL ROOT ---
 using JSON
+using LinearAlgebra
+using Distributions
 
-export CARGAR_FASE_II_JSON, EJECUTAR_TELEMETRIA_ROOT
+export EngineState, inicializar_engine, procesar_datos_zne!, optimizar_brana_5d!
 
-# Conexión directa con qre_phase_ii.json
-function CARGAR_FASE_II_JSON()
-    if isfile("qre_phase_ii.json")
-            return JSON.parsefile("qre_phase_ii.json")
-                else
-        println("[-] Alerta: qre_phase_ii.json no encontrado.")
-                return nothing
-    end
+# =====================================================================
+# SUBSISTEMA 1: ESTRUCTURAS ESTÁTICAS DE MEMORIA CONTIGUA
+# =====================================================================
+struct EngineState
+    N::Int
+    M_sistema::Matrix{Float64}
+    A_expandida::Matrix{Float64}
+    b_objetivo::Vector{Float64}
+    x_estado::Vector{Float64}
 end
 
-# Wrapper unificado para invocar los scripts del root desde el ecosistema
-function EJECUTAR_TELEMETRIA_ROOT(script::String)
-    archivos_validos = [
-        # --- Núcleo Mermin-Peres ---
-        "procesador_documentos.jl", "mermin_peres.jl", "mermin_peres_8d_puro.jl", "mermin_peres_real.jl", "alice_bob_matrices.jl",
-                # --- Criptografía, PoW y Validadores ---
-        "bitcoin_pow_verify.jl", "minero_ramanujan.jl", "pow_miner.jl", "sellar_matriz.jl", "sellar_qre.jl", "detector_integridad.jl",
-                # --- Simulaciones de Cuerdas y Relativistas ---
-        "polyakov_action.jl", "polchinski_real.jl", "polchinski_breach.jl", "mapeador_fisico.jl",
-                # --- Aprendizaje y Orquestación ---
-        "meta_learning_tep.jl", "integrar_aprendizaje_8d.jl", "orquestador_quantum_engine.jl", "p_vs_np_simulation.jl",
-                # --- Telemetría Previa ---
-        "test_learning.jl", "validar_calculo.jl", "verificador_nonce.jl", "verificar_qre.jl", "verificar_target_real.jl"
-            ]
-                
-                    if script in archivos_validos && isfile(script)
-                            println("[+] Ejecutando componente indexado en Root: ", script)
-                                    println("--- INICIO DE EJECUCIÓN ---")
-        include(script)
-                println("--- FIN DE EJECUCIÓN ---")
-    else
-        println("[-] Error: El componente '", script, "' no está indexado o no existe en el root.")
-            end
+function inicializar_engine(N::Int)
+    return EngineState(
+        N,
+        zeros(Float64, N, N),
+        zeros(Float64, N + 1, N),
+        zeros(Float64, N + 1),
+        zeros(Float64, N)
+    )
 end
 
-    export MATRIZ_MITIGADA_ZNE, CARGAR_MATRIZ_MITIGADA
-        
-            # Función nativa acoplada para inyectar la matriz limpia en cualquier script
-                function CARGAR_MATRIZ_MITIGADA()
-                        if isfile("matrices_output.json")
-                                    raw = JSON.parsefile("matrices_output.json")
-                                                datos_raw = raw["matriz_mitigada_clean"]
-                                                            # Re-convertir el vector de vectores JSON a una Matrix flotante nativa de Julia
-            return hcat(datos_raw...)' |> Matrix{Float64}
-                    else
-            println("[-] Error: matrices_output.json ausente.")
-            return nothing
-        end
+# =====================================================================
+# SUBSISTEMA 2: WORKFLOW DE CALIBRACIÓN ZNE BCI (ZERO-ALLOCATION)
+# =====================================================================
+function procesar_datos_zne!(state::EngineState, matriz_cruda::Vector{Any})
+    N = state.N
+    for i in 1:N, j in 1:N
+        state.M_sistema[i, j] = Float64(matriz_cruda[i][j])
     end
+    
+    @views state.A_expandida[1:N, 1:N] .= state.M_sistema
+    escala = 1e15
+    @views state.A_expandida[N+1, 1:N] .= escala
+    
+    fill!(state.b_objetivo, 0.0)
+    state.b_objetivo[end] = 1.0 * escala
+    
+    state.x_estado .= pinv(state.A_expandida) * state.b_objetivo
+    return sum(state.x_estado)
+end
 
-    export CARGAR_HAMILTONIANO_META, CARGAR_DISIPACION_META
+# =====================================================================
+# SUBSISTEMA 3: OPTIMIZACIÓN ANTIFRÁGIL DE BRANAS EN 5D
+# =====================================================================
+function optimizar_brana_5d!(rho_inicial::Matrix{ComplexF64}, rho_target::Matrix{ComplexF64}, matriz_soberana::Matrix{Float64}; max_epocas=20)
+    w = 0.5
+    v = 0.0  
+    lr = 0.05            
+    alpha = 0.85         
+    semilla = 0.7315
+    
+    rho_evolutivo = copy(rho_inicial)
+    fidelidad = 0.0
+    loss = 1.0
+    
+    traza_métrica = real(tr(matriz_soberana))
+    det_métrica = real(det(matriz_soberana))
+    
+    X = [0.0 1.0; 1.0 0.0]
+    Z = [1.0 0.0; 0.0 -1.0]
+    
+    for ep in 1:max_epocas
+        semilla = sin(semilla * 13.0)
+        factor_decaimiento = 1.0 / sqrt(ep)
+        noise_fire = semilla * 0.05 * factor_decaimiento
         
-            function CARGAR_HAMILTONIANO_META()
-                    if isfile("matriz_instagram_106x106.json")
-                                raw = JSON.parsefile("matriz_instagram_106x106.json")
-                                            return hcat(raw["H_efectivo"]...)' |> Matrix{Float64}
-                                                    else
-            println("[-] Error: archivo de Meta ausente.")
-                        return nothing
-        end
+        Op_Global = exp(im * (w + noise_fire) * kron(X, Z))
+        rho_next = Op_Global * rho_inicial * Op_Global'
+        
+        rho_evolutivo = (rho_next * traza_métrica) / (3.0 - (noise_fire * det_métrica))
+        rho_evolutivo /= tr(rho_evolutivo)
+        
+        fidelidad = real(tr(rho_target * rho_evolutivo))
+        loss = 1.0 - fidelidad
+        
+        v = alpha * v + lr * loss * sin(w)
+        w += v
     end
+    
+    return fidelidad, loss
+end
 
-    function CARGAR_DISIPACION_META()
-            if isfile("matriz_instagram_106x106.json")
-                        raw = JSON.parsefile("matriz_instagram_106x106.json")
-                                    return hcat(raw["Gamma_disipacion"]...)' |> Matrix{Float64}
-                                            else
-            return nothing
-        end
-    end
-\nend # Fin del módulo unificado expandido
+end
