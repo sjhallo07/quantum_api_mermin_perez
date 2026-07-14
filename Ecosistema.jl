@@ -22,4 +22,60 @@ module Ecosistema
     # Métricas de Aprendizaje (Previamente dispersas)
     const METRICA_SOBERANA_5D = Float64[-1 0 0 0 0; 0 1 0 0 0; 0 0 1 0 0; 0 0 0 1 0; 0 0 0 0 1]
     const DENSIDAD_4X4 = Float64[0.25 0.35 0.26 0.251; 0.35 0.25 0.35 0.26; 0.26 0.35 0.25 0.35; 0.251 0.26 0.35 0.25]
+
+# --- INTEGRACIÓN AUTOMÁTICA DE ARCHIVOS DEL ROOT ---
+using JSON
+
+export CARGAR_FASE_II_JSON, EJECUTAR_TELEMETRIA_ROOT
+
+# Conexión directa con qre_phase_ii.json
+function CARGAR_FASE_II_JSON()
+    if isfile("qre_phase_ii.json")
+            return JSON.parsefile("qre_phase_ii.json")
+                else
+        println("[-] Alerta: qre_phase_ii.json no encontrado.")
+                return nothing
+    end
 end
+
+# Wrapper unificado para invocar los scripts del root desde el ecosistema
+function EJECUTAR_TELEMETRIA_ROOT(script::String)
+    archivos_validos = [
+        # --- Núcleo Mermin-Peres ---
+        "procesador_documentos.jl", "mermin_peres.jl", "mermin_peres_8d_puro.jl", "mermin_peres_real.jl", "alice_bob_matrices.jl",
+                # --- Criptografía, PoW y Validadores ---
+        "bitcoin_pow_verify.jl", "minero_ramanujan.jl", "pow_miner.jl", "sellar_matriz.jl", "sellar_qre.jl", "detector_integridad.jl",
+                # --- Simulaciones de Cuerdas y Relativistas ---
+        "polyakov_action.jl", "polchinski_real.jl", "polchinski_breach.jl", "mapeador_fisico.jl",
+                # --- Aprendizaje y Orquestación ---
+        "meta_learning_tep.jl", "integrar_aprendizaje_8d.jl", "orquestador_quantum_engine.jl", "p_vs_np_simulation.jl",
+                # --- Telemetría Previa ---
+        "test_learning.jl", "validar_calculo.jl", "verificador_nonce.jl", "verificar_qre.jl", "verificar_target_real.jl"
+            ]
+                
+                    if script in archivos_validos && isfile(script)
+                            println("[+] Ejecutando componente indexado en Root: ", script)
+                                    println("--- INICIO DE EJECUCIÓN ---")
+        include(script)
+                println("--- FIN DE EJECUCIÓN ---")
+    else
+        println("[-] Error: El componente '", script, "' no está indexado o no existe en el root.")
+            end
+end
+
+    export MATRIZ_MITIGADA_ZNE, CARGAR_MATRIZ_MITIGADA
+        
+            # Función nativa acoplada para inyectar la matriz limpia en cualquier script
+                function CARGAR_MATRIZ_MITIGADA()
+                        if isfile("matrices_output.json")
+                                    raw = JSON.parsefile("matrices_output.json")
+                                                datos_raw = raw["matriz_mitigada_clean"]
+                                                            # Re-convertir el vector de vectores JSON a una Matrix flotante nativa de Julia
+            return hcat(datos_raw...)' |> Matrix{Float64}
+                    else
+            println("[-] Error: matrices_output.json ausente.")
+            return nothing
+        end
+    end
+
+end # Fin del módulo unificado expandido
