@@ -1,0 +1,17 @@
+{
+  "experiment_type": "5D_Entropy_Collapse_Brane_Sintonization",
+  "metric_tensor": "MATRIZ_SOBERANA_5D",
+  "determinant_check": -1.0,
+  "optimization_metrics": {
+    "final_entropy_loss": 0.633714,
+    "brane_fidelity": 0.366285,
+    "asymptotic_state": "STABLE_PLATEAU_EQUILIBRIUM",
+    "entangling_operator": "kron(X,Z)_SU2_Exponential"
+  },
+  "stabilization_protocol": {
+    "learning_rate": 0.05,
+    "noise_decay": "Geometric_Inverse_Sqrt_Epoch",
+    "momentum_alpha": 0.85
+  },
+  "timestamp": "2026-07-14T19:09:00Z"
+}
