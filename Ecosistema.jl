@@ -78,4 +78,24 @@ end
         end
     end
 
-end # Fin del módulo unificado expandido
+    export CARGAR_HAMILTONIANO_META, CARGAR_DISIPACION_META
+        
+            function CARGAR_HAMILTONIANO_META()
+                    if isfile("matriz_instagram_106x106.json")
+                                raw = JSON.parsefile("matriz_instagram_106x106.json")
+                                            return hcat(raw["H_efectivo"]...)' |> Matrix{Float64}
+                                                    else
+            println("[-] Error: archivo de Meta ausente.")
+                        return nothing
+        end
+    end
+
+    function CARGAR_DISIPACION_META()
+            if isfile("matriz_instagram_106x106.json")
+                        raw = JSON.parsefile("matriz_instagram_106x106.json")
+                                    return hcat(raw["Gamma_disipacion"]...)' |> Matrix{Float64}
+                                            else
+            return nothing
+        end
+    end
+\nend # Fin del módulo unificado expandido
