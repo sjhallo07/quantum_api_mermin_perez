@@ -1,7 +1,115 @@
-# Reporte Maestro del Ecosistema Cuántico (Matriz 130x130)
+# Reporte de Reconstrucción del Sistema de Ecuaciones (Zero-Alloc Workflow)
 
-## 📊 Características del Sistema Unificado
-- **Dimensión Acoplada:** 130x130
-- **Módulo Estadístico:** `Distributions.jl` -> Distribución Categórica Unificada.
-- **Media del Espacio:** 60.7207
-- **Varianza del Espacio:** 1804.0738
+## 📊 Características del Sistema
+- **Dimensión:** 106 ecuaciones con 106 variables.
+- **Traza Verificada:** 0.9999999999999997
+
+## 📝 Listado de Probabilidades Reconstruidas
+```text
+Estado Qubit x[1] -> Probabilidad Real: -0.00168
+Estado Qubit x[2] -> Probabilidad Real: 0.018271
+Estado Qubit x[3] -> Probabilidad Real: 0.018341
+Estado Qubit x[4] -> Probabilidad Real: 0.018601
+Estado Qubit x[5] -> Probabilidad Real: 0.018363
+Estado Qubit x[6] -> Probabilidad Real: 0.018362
+Estado Qubit x[7] -> Probabilidad Real: 0.01835
+Estado Qubit x[8] -> Probabilidad Real: 0.018326
+Estado Qubit x[9] -> Probabilidad Real: 0.01834
+Estado Qubit x[10] -> Probabilidad Real: 0.018334
+Estado Qubit x[11] -> Probabilidad Real: 0.018337
+Estado Qubit x[12] -> Probabilidad Real: 0.018347
+Estado Qubit x[13] -> Probabilidad Real: 0.018354
+Estado Qubit x[14] -> Probabilidad Real: 0.017414
+Estado Qubit x[15] -> Probabilidad Real: 0.010702
+Estado Qubit x[16] -> Probabilidad Real: 0.018362
+Estado Qubit x[17] -> Probabilidad Real: -0.006261
+Estado Qubit x[18] -> Probabilidad Real: 0.018343
+Estado Qubit x[19] -> Probabilidad Real: 0.018341
+Estado Qubit x[20] -> Probabilidad Real: 0.018331
+Estado Qubit x[21] -> Probabilidad Real: 0.01835
+Estado Qubit x[22] -> Probabilidad Real: 0.018341
+Estado Qubit x[23] -> Probabilidad Real: 0.01835
+Estado Qubit x[24] -> Probabilidad Real: 0.018356
+Estado Qubit x[25] -> Probabilidad Real: 0.018361
+Estado Qubit x[26] -> Probabilidad Real: 0.025257
+Estado Qubit x[27] -> Probabilidad Real: -0.003607
+Estado Qubit x[28] -> Probabilidad Real: 0.018339
+Estado Qubit x[29] -> Probabilidad Real: 0.005897
+Estado Qubit x[30] -> Probabilidad Real: 0.018365
+Estado Qubit x[31] -> Probabilidad Real: 0.018342
+Estado Qubit x[32] -> Probabilidad Real: 0.018349
+Estado Qubit x[33] -> Probabilidad Real: 0.018331
+Estado Qubit x[34] -> Probabilidad Real: 0.018357
+Estado Qubit x[35] -> Probabilidad Real: 0.018346
+Estado Qubit x[36] -> Probabilidad Real: -0.0
+Estado Qubit x[37] -> Probabilidad Real: 0.017761
+Estado Qubit x[38] -> Probabilidad Real: -0.000427
+Estado Qubit x[39] -> Probabilidad Real: -0.000316
+Estado Qubit x[40] -> Probabilidad Real: -0.001242
+Estado Qubit x[41] -> Probabilidad Real: 0.015531
+Estado Qubit x[42] -> Probabilidad Real: 0.013796
+Estado Qubit x[43] -> Probabilidad Real: -0.000589
+Estado Qubit x[44] -> Probabilidad Real: 0.00058
+Estado Qubit x[45] -> Probabilidad Real: 0.017357
+Estado Qubit x[46] -> Probabilidad Real: -0.000843
+Estado Qubit x[47] -> Probabilidad Real: -1.0e-6
+Estado Qubit x[48] -> Probabilidad Real: 0.018361
+Estado Qubit x[49] -> Probabilidad Real: -0.0
+Estado Qubit x[50] -> Probabilidad Real: -5.4e-5
+Estado Qubit x[51] -> Probabilidad Real: -0.0
+Estado Qubit x[52] -> Probabilidad Real: -0.0
+Estado Qubit x[53] -> Probabilidad Real: 0.018376
+Estado Qubit x[54] -> Probabilidad Real: 2.0e-6
+Estado Qubit x[55] -> Probabilidad Real: -3.0e-6
+Estado Qubit x[56] -> Probabilidad Real: 4.0e-6
+Estado Qubit x[57] -> Probabilidad Real: -0.000699
+Estado Qubit x[58] -> Probabilidad Real: 0.018368
+Estado Qubit x[59] -> Probabilidad Real: 0.000339
+Estado Qubit x[60] -> Probabilidad Real: 0.0
+Estado Qubit x[61] -> Probabilidad Real: 0.018357
+Estado Qubit x[62] -> Probabilidad Real: 0.01835
+Estado Qubit x[63] -> Probabilidad Real: 0.01835
+Estado Qubit x[64] -> Probabilidad Real: 0.018363
+Estado Qubit x[65] -> Probabilidad Real: 0.018352
+Estado Qubit x[66] -> Probabilidad Real: 0.018354
+Estado Qubit x[67] -> Probabilidad Real: -0.0
+Estado Qubit x[68] -> Probabilidad Real: -0.0
+Estado Qubit x[69] -> Probabilidad Real: 0.0
+Estado Qubit x[70] -> Probabilidad Real: 0.000236
+Estado Qubit x[71] -> Probabilidad Real: -0.00042
+Estado Qubit x[72] -> Probabilidad Real: 0.0
+Estado Qubit x[73] -> Probabilidad Real: 0.018313
+Estado Qubit x[74] -> Probabilidad Real: 0.018961
+Estado Qubit x[75] -> Probabilidad Real: 0.017969
+Estado Qubit x[76] -> Probabilidad Real: 0.014854
+Estado Qubit x[77] -> Probabilidad Real: 0.01511
+Estado Qubit x[78] -> Probabilidad Real: 0.018271
+Estado Qubit x[79] -> Probabilidad Real: 0.017714
+Estado Qubit x[80] -> Probabilidad Real: -0.0
+Estado Qubit x[81] -> Probabilidad Real: 0.008459
+Estado Qubit x[82] -> Probabilidad Real: 0.012591
+Estado Qubit x[83] -> Probabilidad Real: 0.001329
+Estado Qubit x[84] -> Probabilidad Real: -0.004783
+Estado Qubit x[85] -> Probabilidad Real: -0.0
+Estado Qubit x[86] -> Probabilidad Real: -0.0
+Estado Qubit x[87] -> Probabilidad Real: -0.000572
+Estado Qubit x[88] -> Probabilidad Real: -0.000408
+Estado Qubit x[89] -> Probabilidad Real: 0.000303
+Estado Qubit x[90] -> Probabilidad Real: -6.0e-6
+Estado Qubit x[91] -> Probabilidad Real: 0.016322
+Estado Qubit x[92] -> Probabilidad Real: 0.019382
+Estado Qubit x[93] -> Probabilidad Real: 0.018348
+Estado Qubit x[94] -> Probabilidad Real: -0.000321
+Estado Qubit x[95] -> Probabilidad Real: 0.001289
+Estado Qubit x[96] -> Probabilidad Real: 0.000816
+Estado Qubit x[97] -> Probabilidad Real: -7.3e-5
+Estado Qubit x[98] -> Probabilidad Real: -0.0
+Estado Qubit x[99] -> Probabilidad Real: -0.0
+Estado Qubit x[100] -> Probabilidad Real: -0.0
+Estado Qubit x[101] -> Probabilidad Real: -9.5e-5
+Estado Qubit x[102] -> Probabilidad Real: 3.0e-6
+Estado Qubit x[103] -> Probabilidad Real: 0.0
+Estado Qubit x[104] -> Probabilidad Real: 0.0
+Estado Qubit x[105] -> Probabilidad Real: 0.018369
+Estado Qubit x[106] -> Probabilidad Real: -0.0
+```
