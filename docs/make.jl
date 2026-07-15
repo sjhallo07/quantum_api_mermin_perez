@@ -17,12 +17,3 @@ makedocs(;
     warnonly=Symbol[],
     checkdocs=:exports,
 )
-
-if get(ENV, "CI", "") == "true"
-    deploydocs(;
-        repo="github.com/sjhallo07/quantum_api_mermin_perez.git",
-        branch="gh-pages",
-        devbranch="main",
-        push_preview=true,
-    )
-end
