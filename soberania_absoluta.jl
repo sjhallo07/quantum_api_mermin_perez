@@ -1,3 +1,4 @@
+include("Ecosistema.jl")
 using .Ecosistema
 module SoberaniaCuantica
     using ..Ecosistema

@@ -9,8 +9,8 @@ println("\n=====================================================")
 println("🧠 MONITOR DE META-LEARNING: AUDITORÍA ZERO-ALLOCATION")
 println("=====================================================")
 
-const G_5D = SoberaniaCuantica.METRICA_5D
-const RHO_8D = SoberaniaCuantica.DENSIDAD_8X8
+const G_5D = Ecosistema.METRICA_SOBERANA_5D
+const RHO_8D = Ecosistema.IDENTIDAD_8X8
 const vector_fase_gradiente = [0.0, 1.0, 0.0, 0.0, 0.0]
 const TR_RHO_FACTOR = 0.01 * real(tr(RHO_8D))
 
