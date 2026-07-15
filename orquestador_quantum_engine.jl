@@ -23,12 +23,12 @@ function arrancar_orquestador_maestro()
     # 2. Carga Dinámica y Control de Integridad de la Ráfaga
     specs = JSON.parsefile(archivo_specs)
     datos_cuanticos = JSON.parsefile(archivo_matriz)
-    
+
     println("[Instancia] Inicializando motor bajo protocolo: ", specs["subsystems"]["memory_protocol"])
     matriz_raw = datos_cuanticos["matriz_raw"]
-    
+
     dim_maestra = 130 # Espacio unificado 130x130 (7 Qubits Activos)
-    
+
     # Pre-asignación de memoria contigua (G.C. Shield)
     A_expandida = zeros(Float64, dim_maestra + 1, dim_maestra)
     b_objetivo = zeros(Float64, dim_maestra + 1)
@@ -42,7 +42,7 @@ function arrancar_orquestador_maestro()
 
     # 4. Inyección de la Restricción Moore-Penrose Pesada
     escala = 1e15
-    @views A_expandida[dim_maestra + 1, 1:dim_maestra] .= escala
+    @views A_expandida[dim_maestra+1, 1:dim_maestra] .= escala
     b_objetivo[end] = 1.0 * escala
 
     # 5. Resolución Dinámica de la Traza Cuántica
@@ -53,7 +53,7 @@ function arrancar_orquestador_maestro()
 
     # 6. Modelado de Distribución de Estados con Distributions.jl
     dist_bci = Categorical(x_probabilidades)
-    
+
     # Registro síncrono del Meta-Learning en la bitácora live
     open(archivo_log, "a") do log
         println(log, "[REGISTRO_RSI] [WORKFLOW_AUTORREGULADO] Traza: ", traza_final)
@@ -68,7 +68,7 @@ function arrancar_orquestador_maestro()
         "estado" => "SUCCESS_ORCHESTRATOR_BCI_FLOW",
         "timestamp" => "2026-07-14"
     )
-    
+
     open("qre_validation_core.json", "w") do f
         JSON.print(f, resultados_core)
     end
@@ -79,4 +79,10 @@ function arrancar_orquestador_maestro()
     println("====================================================")
 end
 
-arrancar_orquestador_maestro()
+function main()
+    arrancar_orquestador_maestro()
+end
+
+if abspath(PROGRAM_FILE) == @__FILE__
+    main()
+end
