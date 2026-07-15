@@ -1,0 +1,25 @@
+# === REGISTROS DE TELEMETRÍA Y LOGS RESIDUALES ===
+*.log
+*.json
+*.md
+*.seal
+*.lock
+*.raw
+*.aux
+*.out
+*.pdf
+*.tex
+
+# === EXCEPCIONES: MANTENER ESPECIFICACIONES CORE ===
+!engine_specs.json
+!README.md
+!CURL_QUANTUM_DOC.md
+!sistema_ecuaciones.md
+
+# === RESIDUOS DE INSTALACIÓN Y COMPILACIÓN (JULIA/PYTHON) ===
+.Conda/
+.quantum_pid
+manifesto_final_qre.*
+manifiesto_final_qre.*
+manifiesto_tep.*
+solver_tmp.jl
