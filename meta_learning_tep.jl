@@ -1,42 +1,23 @@
+include("Ecosistema.jl")
 using .Ecosistema
 include("soberania_absoluta.jl")
 using LinearAlgebra
 using Printf
 
-    -1.0  0.0  0.0  0.0  0.0;
-     0.0  1.0  0.0  0.0  0.0;
-     0.0  0.0  1.0  0.0  0.0;
-     0.0  0.0  0.0  1.0  0.0;
-     0.0  0.0  0.0  0.0  1.0
-]
-
+const MATRIZ_SOBERANA_5D = Ecosistema.METRICA_SOBERANA_5D
 
 # --- INYECCIÓN GLOBAL 8D (Evita truncamiento de q6, q7, q8) ---
-    0.110  0.030  0.050  0.020  0.050  0.040  0.030  0.030;
-    0.030  0.130  0.060  0.020  0.060  0.050  0.040  0.040;
-    0.050  0.060  0.150  0.030  0.080  0.060  0.050  0.050;
-    0.020  0.020  0.030  0.100  0.030  0.030  0.020  0.020;
-    0.050  0.060  0.080  0.030  0.160  0.060  0.050  0.050;
-    0.040  0.050  0.060  0.030  0.060  0.120  0.040  0.040;
-    0.030  0.040  0.050  0.020  0.050  0.040  0.110  0.030;
-    0.030  0.040  0.050  0.020  0.050  0.040  0.030  0.120
-]
-    0.2500  0.3500  0.2600  0.2510;
-    0.3500  0.2500  0.3500  0.2600;
-    0.2600  0.3500  0.2500  0.3500;
-    0.2510  0.2600  0.3500  0.2500
-]
 
-const TARGET_DELTA = 0.332838          
-const WEINBERG_INICIAL = 0.44856123    
+const TARGET_DELTA = 0.332838
+const WEINBERG_INICIAL = 0.44856123
 
 const BUFFER_PSI_INICIAL = [0.0, 1/sqrt(2), -1/sqrt(2), 0.0]
-const BUFFER_PSI_ATAQUE  = zeros(4)
-const BUFFER_PSI_FINAL   = zeros(4)
+const BUFFER_PSI_ATAQUE = zeros(4)
+const BUFFER_PSI_FINAL = zeros(4)
 
 function evaluar_tep_soberano(weinberg_coupling)
-    factor_soberano = abs(Ecosistema.METRICA_SOBERANA_5D[1,1])
-    
+    factor_soberano = abs(Ecosistema.METRICA_SOBERANA_5D[1, 1])
+
     BUFFER_PSI_ATAQUE[1] = BUFFER_PSI_INICIAL[1] * factor_soberano
     BUFFER_PSI_ATAQUE[2] = BUFFER_PSI_INICIAL[2] * factor_soberano
     BUFFER_PSI_ATAQUE[3] = BUFFER_PSI_INICIAL[3] * weinberg_coupling
@@ -53,7 +34,7 @@ function evaluar_tep_soberano(weinberg_coupling)
     end
 
     val_B_inicial = (BUFFER_PSI_INICIAL[2]^2) + (BUFFER_PSI_INICIAL[4]^2)
-    val_B_final   = (BUFFER_PSI_FINAL[2]^2)   + (BUFFER_PSI_FINAL[4]^2)
+    val_B_final = (BUFFER_PSI_FINAL[2]^2) + (BUFFER_PSI_FINAL[4]^2)
 
     return abs(val_B_final - val_B_inicial)
 end
