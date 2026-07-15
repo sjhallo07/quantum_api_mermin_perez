@@ -1,100 +1,138 @@
-Residuo de Ruido ARM Filtrado: 1.121817
----------------------------------------------------------------------
-  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.002192
-  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.003588
-  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.005306
-  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.001614
-  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.000574
-  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.002302
-  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.007523
-  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.005249
-  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.000852
-  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.011482
-  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.002656
-  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.002883
-  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.003910
-  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.010398
-  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.003451
-  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.004225
-  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.001470
-  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.003993
-  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.006698
-  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.001747
-  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.003555
-  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.005221
-  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.004088
-  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.006426
-  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.001283
-  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.004062
-  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.006521
----------------------------------------------------------------------
-LOG TIMING: 13-07-2026 03:16:45 | Fase de Sintonía Óptima: 0.175
-Residuo de Ruido ARM Filtrado: 2.144536
----------------------------------------------------------------------
-  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.004770
-  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.002667
-  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.009837
-  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.009449
-  [🔴 THETA]  7.81 Hz -> Potencia Espectral Sintonizada: 0.008184
-  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.000585
-  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.006444
-  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.004446
-  [🟢 ALFA] 10.94 Hz -> Potencia Espectral Sintonizada: 0.004230
-  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.009347
-  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.003501
-  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.002629
-  [🔵 BETA] 14.06 Hz -> Potencia Espectral Sintonizada: 0.003970
-  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.006960
-  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.004608
-  [🔵 BETA] 16.41 Hz -> Potencia Espectral Sintonizada: 0.001608
-  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.001752
-  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.001605
-  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.001991
-  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.001992
-  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.001397
-  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.001904
-  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.004209
-  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.002260
-  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.005613
-  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.001920
-  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002088
-  [🔵 BETA] 25.78 Hz -> Potencia Espectral Sintonizada: 0.003434
-  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.002290
-  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.005624
-  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.002876
-  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.005451
-  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.007602
----------------------------------------------------------------------
-LOG TIMING: 13-07-2026 03:16:55 | Fase de Sintonía Óptima: 0.0625
-Residuo de Ruido ARM Filtrado: 1.327881
----------------------------------------------------------------------
-  [🔴 THETA]  4.69 Hz -> Potencia Espectral Sintonizada: 0.004599
-  [🔴 THETA]  5.47 Hz -> Potencia Espectral Sintonizada: 0.006656
-  [🔴 THETA]  6.25 Hz -> Potencia Espectral Sintonizada: 0.001729
-  [🔴 THETA]  7.03 Hz -> Potencia Espectral Sintonizada: 0.002016
-  [🟢 ALFA]  8.59 Hz -> Potencia Espectral Sintonizada: 0.001790
-  [🟢 ALFA]  9.38 Hz -> Potencia Espectral Sintonizada: 0.002151
-  [🟢 ALFA] 10.16 Hz -> Potencia Espectral Sintonizada: 0.001414
-  [🟢 ALFA] 11.72 Hz -> Potencia Espectral Sintonizada: 0.005470
-  [🔵 BETA] 12.50 Hz -> Potencia Espectral Sintonizada: 0.006074
-  [🔵 BETA] 13.28 Hz -> Potencia Espectral Sintonizada: 0.002965
-  [🔵 BETA] 14.84 Hz -> Potencia Espectral Sintonizada: 0.001279
-  [🔵 BETA] 15.62 Hz -> Potencia Espectral Sintonizada: 0.003117
-  [🔵 BETA] 17.19 Hz -> Potencia Espectral Sintonizada: 0.001055
-  [🔵 BETA] 17.97 Hz -> Potencia Espectral Sintonizada: 0.002263
-  [🔵 BETA] 18.75 Hz -> Potencia Espectral Sintonizada: 0.004249
-  [🔵 BETA] 19.53 Hz -> Potencia Espectral Sintonizada: 0.006502
-  [🔵 BETA] 20.31 Hz -> Potencia Espectral Sintonizada: 0.006100
-  [🔵 BETA] 21.09 Hz -> Potencia Espectral Sintonizada: 0.002635
-  [🔵 BETA] 21.88 Hz -> Potencia Espectral Sintonizada: 0.005614
-  [🔵 BETA] 22.66 Hz -> Potencia Espectral Sintonizada: 0.001330
-  [🔵 BETA] 23.44 Hz -> Potencia Espectral Sintonizada: 0.008044
-  [🔵 BETA] 24.22 Hz -> Potencia Espectral Sintonizada: 0.004112
-  [🔵 BETA] 25.00 Hz -> Potencia Espectral Sintonizada: 0.002908
-  [🔵 BETA] 26.56 Hz -> Potencia Espectral Sintonizada: 0.001937
-  [🔵 BETA] 27.34 Hz -> Potencia Espectral Sintonizada: 0.002736
-  [🔵 BETA] 28.12 Hz -> Potencia Espectral Sintonizada: 0.002503
-  [🔵 BETA] 28.91 Hz -> Potencia Espectral Sintonizada: 0.003939
-  [🔵 BETA] 29.69 Hz -> Potencia Espectral Sintonizada: 0.004774
-[REGISTRO_RSI] [WORKFLOW_AUTORREGULADO] Traza: 0.9999999999999984
+[2026-07-15 00:45:41.467] [SYSTEM] === MÓDULO PERPETUO ACTIVADO: /root/quantum_api_mermin_perez ===
+[2026-07-15 00:45:41.607] [NET] Entablando socket TCP permanente con solo.ckpool.org:3333...
+[2026-07-15 00:45:42.288] [NET] Conexión Stratum autorizada. Escucha infinita de bloques...
+[2026-07-15 00:45:42.488] [POOL] 🔔 ¡Bloque Candidato Entrante detectado en la Blockchain!
+[2026-07-15 00:45:42.490] [ALGEBRA] Procesando matriz (130, 130). Extrayendo entropía cuántica...
+[2026-07-15 00:45:42.491] [ENGINE] Matriz acoplada. Buscador paralelo multihilo activado (Asignación Cero)...
+[2026-07-15 00:45:42.493] [PARALLEL] Ejecutando pipeline sobre 4 hilos de CPU ARM con Atomics.
+[2026-07-15 00:52:56.972] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:52:58.095] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:52:58.292] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:52:58.294] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:52:58.656] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:52:58.736] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:03.742] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:04.326] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:04.504] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:04.505] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:04.511] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:04.517] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:09.522] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:15.581] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:15.787] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:15.788] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:15.793] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:15.796] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:20.801] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:21.538] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:21.738] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:21.742] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:21.754] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:21.761] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:26.766] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:28.061] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:28.415] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:28.416] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:28.421] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:28.424] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:33.429] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:39.368] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:39.704] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:39.707] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:39.724] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:39.738] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:44.748] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:45.670] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:45.864] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:45.869] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:45.890] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:45.902] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:50.909] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:51.491] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:51.728] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:51.731] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:51.747] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:51.763] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:53:56.768] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO ACTIVADO ===
+[2026-07-15 00:53:57.718] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:53:57.920] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:53:57.924] [QUANTUM_READ] Abriendo conteo_shots_quantum.json para extraer entropía de cúbits...
+[2026-07-15 00:53:57.935] [ALGEBRA_WARN] Fallo al leer JSON cuántico (ArgumentError("byte is not an ASCII hexadecimal digit")). Usando búfer estocástico alterno...
+[2026-07-15 00:53:57.940] [CRITICAL] Reiniciando por caída: ArgumentError("byte is not an ASCII hexadecimal digit")
+[2026-07-15 00:54:16.795] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO REPARADO ===
+[2026-07-15 00:54:18.396] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:54:18.695] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:54:18.696] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets de forma directa.
+[2026-07-15 00:54:18.775] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:54:19.685] [CRITICAL] Reiniciando por caída: MethodError(Main.buscar_nonce_produccion, (Union{Nothing, SubString{String}}["6a56988200000247", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], Union{Nothing, SubString{String}}["6a56988200000247", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], UInt8[0xd8, 0x34, 0xe6, 0x62, 0x24, 0x07, 0xca, 0xd0, 0x78, 0xa3, 0x3c, 0xe3, 0x80, 0x1e, 0x70, 0x45, 0x53, 0x00, 0x0e, 0x70, 0x2c, 0x40, 0xaf, 0x3e, 0xc9, 0xc0, 0x6f, 0xea, 0x1e, 0x40, 0xa4, 0x0c], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], 2695953529101130949315647634472399133601089873857416408613777309, TCPSocket(RawFD(21) open, 0 bytes waiting), "a7bc606a"), 0x000000000000975b)
+[2026-07-15 00:54:24.693] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO REPARADO ===
+[2026-07-15 00:54:25.842] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:54:26.535] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:54:26.536] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets de forma directa.
+[2026-07-15 00:54:26.538] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:54:26.558] [CRITICAL] Reiniciando por caída: MethodError(Main.buscar_nonce_produccion, (Union{Nothing, SubString{String}}["6a56988200000247", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], Union{Nothing, SubString{String}}["6a56988200000247", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], UInt8[0xd8, 0x34, 0xe6, 0x62, 0x24, 0x07, 0xca, 0xd0, 0x78, 0xa3, 0x3c, 0xe3, 0x80, 0x1e, 0x70, 0x45, 0x53, 0x00, 0x0e, 0x70, 0x2c, 0x40, 0xaf, 0x3e, 0xc9, 0xc0, 0x6f, 0xea, 0x1e, 0x40, 0xa4, 0x0c], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], 2695953529101130949315647634472399133601089873857416408613777309, TCPSocket(RawFD(22) open, 0 bytes waiting), "a7bc606a"), 0x000000000000975b)
+[2026-07-15 00:54:31.561] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO REPARADO ===
+[2026-07-15 00:54:32.206] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:54:32.394] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:54:32.394] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets de forma directa.
+[2026-07-15 00:54:32.396] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:54:32.416] [CRITICAL] Reiniciando por caída: MethodError(Main.buscar_nonce_produccion, (Union{Nothing, SubString{String}}["6a56988200000247", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], Union{Nothing, SubString{String}}["6a56988200000247", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], UInt8[0xd8, 0x34, 0xe6, 0x62, 0x24, 0x07, 0xca, 0xd0, 0x78, 0xa3, 0x3c, 0xe3, 0x80, 0x1e, 0x70, 0x45, 0x53, 0x00, 0x0e, 0x70, 0x2c, 0x40, 0xaf, 0x3e, 0xc9, 0xc0, 0x6f, 0xea, 0x1e, 0x40, 0xa4, 0x0c], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da2c", "true"], 2695953529101130949315647634472399133601089873857416408613777309, TCPSocket(RawFD(23) paused, 98 bytes waiting), "a7bc606a"), 0x000000000000975b)
+[2026-07-15 00:54:37.421] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO REPARADO ===
+[2026-07-15 00:54:38.237] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:54:38.406] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:54:38.408] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets de forma directa.
+[2026-07-15 00:54:38.410] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:54:38.472] [CRITICAL] Reiniciando por caída: MethodError(Main.buscar_nonce_produccion, (Union{Nothing, SubString{String}}["6a56988200000248", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], Union{Nothing, SubString{String}}["6a56988200000248", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], UInt8[0xd8, 0x34, 0xe6, 0x62, 0x24, 0x07, 0xca, 0xd0, 0x78, 0xa3, 0x3c, 0xe3, 0x80, 0x1e, 0x70, 0x45, 0x53, 0x00, 0x0e, 0x70, 0x2c, 0x40, 0xaf, 0x3e, 0xc9, 0xc0, 0x6f, 0xea, 0x1e, 0x40, 0xa4, 0x0c], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], 2695953529101130949315647634472399133601089873857416408613777309, TCPSocket(RawFD(24) open, 0 bytes waiting), "a7bc606a"), 0x000000000000975b)
+[2026-07-15 00:54:43.481] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO REPARADO ===
+[2026-07-15 00:54:49.306] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:54:49.578] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:54:49.580] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets de forma directa.
+[2026-07-15 00:54:49.584] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:54:49.709] [CRITICAL] Reiniciando por caída: MethodError(Main.buscar_nonce_produccion, (Union{Nothing, SubString{String}}["6a56988200000248", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], Union{Nothing, SubString{String}}["6a56988200000248", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], UInt8[0xd8, 0x34, 0xe6, 0x62, 0x24, 0x07, 0xca, 0xd0, 0x78, 0xa3, 0x3c, 0xe3, 0x80, 0x1e, 0x70, 0x45, 0x53, 0x00, 0x0e, 0x70, 0x2c, 0x40, 0xaf, 0x3e, 0xc9, 0xc0, 0x6f, 0xea, 0x1e, 0x40, 0xa4, 0x0c], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], 2695953529101130949315647634472399133601089873857416408613777309, TCPSocket(RawFD(25) paused, 98 bytes waiting), "a7bc606a"), 0x000000000000975b)
+[2026-07-15 00:54:54.733] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO REPARADO ===
+[2026-07-15 00:55:00.536] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:55:00.732] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:55:00.735] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets de forma directa.
+[2026-07-15 00:55:00.740] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:55:00.953] [CRITICAL] Reiniciando por caída: MethodError(Main.buscar_nonce_produccion, (Union{Nothing, SubString{String}}["6a56988200000248", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], Union{Nothing, SubString{String}}["6a56988200000248", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], UInt8[0xd8, 0x34, 0xe6, 0x62, 0x24, 0x07, 0xca, 0xd0, 0x78, 0xa3, 0x3c, 0xe3, 0x80, 0x1e, 0x70, 0x45, 0x53, 0x00, 0x0e, 0x70, 0x2c, 0x40, 0xaf, 0x3e, 0xc9, 0xc0, 0x6f, 0xea, 0x1e, 0x40, 0xa4, 0x0c], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da4a", "true"], 2695953529101130949315647634472399133601089873857416408613777309, TCPSocket(RawFD(26) paused, 98 bytes waiting), "a7bc606a"), 0x000000000000975b)
+[2026-07-15 00:55:05.958] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO REPARADO ===
+[2026-07-15 00:55:06.703] [NET] Conexión autorizada. Escuchando red...
+[2026-07-15 00:55:06.908] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:55:06.913] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets de forma directa.
+[2026-07-15 00:55:06.927] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:55:06.952] [CRITICAL] Reiniciando por caída: MethodError(Main.buscar_nonce_produccion, (Union{Nothing, SubString{String}}["6a56988200000249", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da68", "true"], Union{Nothing, SubString{String}}["6a56988200000249", "56c1fa82a8b672c2335832e4254226a4356e18000000be050000000000000000"], UInt8[0xd8, 0x34, 0xe6, 0x62, 0x24, 0x07, 0xca, 0xd0, 0x78, 0xa3, 0x3c, 0xe3, 0x80, 0x1e, 0x70, 0x45, 0x53, 0x00, 0x0e, 0x70, 0x2c, 0x40, 0xaf, 0x3e, 0xc9, 0xc0, 0x6f, 0xea, 0x1e, 0x40, 0xa4, 0x0c], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da68", "true"], Union{Nothing, SubString{String}}["20000000", "1702369d", "6a56da68", "true"], 2695953529101130949315647634472399133601089873857416408613777309, TCPSocket(RawFD(27) open, 0 bytes waiting), "a7bc606a"), 0x000000000000975b)
+[2026-07-15 00:55:25.730] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO COMPILADO ===
+[2026-07-15 00:55:26.631] [NET] Conexión autorizada con ExtraNonce1: 0xa7bc606a. Escuchando red...
+[2026-07-15 00:55:26.973] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:55:26.975] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets.
+[2026-07-15 00:55:26.977] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:55:26.978] [ENGINE] Matriz cuántica acoplada al buffer. Pipeline paralelo activo...
+[2026-07-15 00:55:27.462] [CRITICAL] Reiniciando por caída: CompositeException(Any[TaskFailedException(Task (failed) @0x0000007071668010)])
+[2026-07-15 00:55:32.469] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO COMPILADO ===
+[2026-07-15 00:55:33.176] [NET] Conexión autorizada con ExtraNonce1: 0xa7bc606a. Escuchando red...
+[2026-07-15 00:55:33.461] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:55:33.463] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets.
+[2026-07-15 00:55:33.465] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:55:33.469] [ENGINE] Matriz cuántica acoplada al buffer. Pipeline paralelo activo...
+[2026-07-15 00:55:33.475] [CRITICAL] Reiniciando por caída: CompositeException(Any[TaskFailedException(Task (failed) @0x0000007073dfa1d0)])
+[2026-07-15 00:55:38.481] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO COMPILADO ===
+[2026-07-15 00:55:39.465] [NET] Conexión autorizada con ExtraNonce1: 0xa7bc606a. Escuchando red...
+[2026-07-15 00:55:39.791] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:55:39.793] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets.
+[2026-07-15 00:55:39.795] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:55:39.796] [ENGINE] Matriz cuántica acoplada al buffer. Pipeline paralelo activo...
+[2026-07-15 00:55:39.806] [CRITICAL] Reiniciando por caída: CompositeException(Any[TaskFailedException(Task (failed) @0x0000007073dfa950)])
+[2026-07-15 00:55:44.810] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO COMPILADO ===
+[2026-07-15 00:55:45.884] [NET] Conexión autorizada con ExtraNonce1: 0xa7bc606a. Escuchando red...
+[2026-07-15 00:55:46.372] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:55:46.376] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets.
+[2026-07-15 00:55:46.382] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:55:46.384] [ENGINE] Matriz cuántica acoplada al buffer. Pipeline paralelo activo...
+[2026-07-15 00:55:46.392] [CRITICAL] Reiniciando por caída: CompositeException(Any[TaskFailedException(Task (failed) @0x0000007073dfb0d0)])
+[2026-07-15 00:56:32.979] [SYSTEM] === MÓDULO CUÁNTICO PERPETUO COMPILADO ===
+[2026-07-15 00:56:39.951] [NET] Conexión autorizada con ExtraNonce1: 0xa7bc606a. Escuchando red...
+[2026-07-15 00:56:40.191] [POOL] 🔔 ¡Bloque Candidato Detectado!
+[2026-07-15 00:56:40.193] [QUANTUM_READ] Abriendo conteo_shots_quantum.json... Inyectando kets.
+[2026-07-15 00:56:40.333] [ALGEBRA] Firma Merkle extraída de la entropía cuántica sin conversiones hex.
+[2026-07-15 00:56:40.766] [ENGINE] Matriz cuántica acoplada al buffer. Pipeline paralelo activo...
 [REGISTRO_RSI] [WORKFLOW_AUTORREGULADO] Traza: 1.0

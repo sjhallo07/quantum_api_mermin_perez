@@ -32,8 +32,8 @@ end
 proceso_b = run(pipeline(`julia -e $codigo_nodo_b`, stdin=pipe_ida, stdout=pipe_vuelta), wait=false)
 
 # Cerrar los extremos no utilizados en el proceso padre para que el flujo sea unidireccional
-close(pipe_ida.reader)
-close(pipe_vuelta.writer)
+close(pipe_ida.out)
+close(pipe_vuelta.in)
 
 # Escritura asíncrona en el canal de ida hacia B
 @async begin

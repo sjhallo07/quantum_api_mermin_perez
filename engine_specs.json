@@ -6,14 +6,14 @@
   "subsystems": {
     "algebraic_core": "Symbolics.jl",
     "stochastic_solver": "Distributions.jl",
-    "matrix_dimension": "130x130",
-    "active_qubits": 7,
+    "matrix_dimension": "2048x2048",
+    "active_qubits": 11,
     "memory_protocol": "Zero-Allocation-InPlace"
   },
   "telemetry_targets": {
     "validation_file": "qre_validation_core.json",
-    "metrics_log": "deamon_espectro.log",
+    "metrics_log": "daemon_espectro.log",
     "shots_output": "conteo_shots_quantum.json"
   },
-  "timestamp": "2026-07-14T18:34:00Z"
+  "timestamp": "2026-07-14T21:49:00Z"
 }
