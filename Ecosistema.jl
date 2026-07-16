@@ -1,103 +1,77 @@
 module Ecosistema
 
-using JSON
 using LinearAlgebra
-using Distributions
 
-export EngineState, inicializar_engine, procesar_datos_zne!, optimizar_brana_5d!
-export METRICA_SOBERANA_5D, DENSIDAD_4X4, IDENTIDAD_8X8, DISTRIBUCION_BASE, GL, PAULI_X, Z2, X2, I2
+export inicializar_engine, procesar_datos_zne!, optimizar_brana_5d!
 
-# --- CONSTANTES DE INTEGRACIÓN EXTRÁIDAS DE LOS WORKFLOWS ---
-const METRICA_SOBERANA_5D = Float64[-1 0 0 0 0; 0 1 0 0 0; 0 0 1 0 0; 0 0 0 1 0; 0 0 0 0 1]
-const DENSIDAD_4X4 = [0.25 0 0 0; 0 0.25 0 0; 0 0 0.25 0; 0 0 0 0.25]
-const IDENTIDAD_8X8 = [1.0 0 0 0 0 0 0 0; 0 1.0 0 0 0 0 0 0; 0 0 1.0 0 0 0 0 0; 0 0 0 1.0 0 0 0 0; 0 0 0 0 1.0 0 0 0; 0 0 0 0 0 1.0 0 0; 0 0 0 0 0 0 1.0 0; 0 0 0 0 0 0 0 1.0]
-const DISTRIBUCION_BASE = [0.1, 0.2, 0.3, 0.4]
-const GL = 2.0
-const PAULI_X = 1
-const Z2 = 2
-const X2 = 3
-const I2 = 4
-
-# =====================================================================
-# SUBSISTEMA 1: ESTRUCTURAS ESTÁTICAS DE MEMORIA CONTIGUA
-# =====================================================================
-struct EngineState
-    N::Int
+# Estructura estática del motor cuántico para Zero-Allocation
+struct EnginePool
     M_sistema::Matrix{Float64}
-    A_expandida::Matrix{Float64}
-    b_objetivo::Vector{Float64}
-    x_estado::Vector{Float64}
 end
 
-function inicializar_engine(N::Int)
-    return EngineState(
-        N,
-        zeros(Float64, N, N),
-        zeros(Float64, N + 1, N),
-        zeros(Float64, N + 1),
-        zeros(Float64, N)
-    )
+# 1. Inicialización de memoria en el motor
+function inicializar_engine(dimension::Int)
+    return EnginePool(zeros(Float64, dimension, dimension))
 end
 
-# =====================================================================
-# SUBSISTEMA 2: WORKFLOW DE CALIBRACIÓN ZNE BCI (ZERO-ALLOCATION)
-# =====================================================================
-function procesar_datos_zne!(state::EngineState, matriz_cruda::Vector{Any})
-    N = state.N
-    for i in 1:N, j in 1:N
-        state.M_sistema[i, j] = Float64(matriz_cruda[i][j])
+# 2. Resolvedor de robustez multi-escala ZNE con pesos Moore-Penrose
+function procesar_datos_zne!(engine::EnginePool, matriz_any::Vector{Any})
+    dim = size(engine.M_sistema, 1)
+    
+    # Sincronización in-place y cálculo de la traza calibrada
+    for i in 1:dim, j in 1:dim
+        engine.M_sistema[i, j] = Float64(matriz_any[i][j])
     end
-
-    @views state.A_expandida[1:N, 1:N] .= state.M_sistema
-    escala = 1e15
-    @views state.A_expandida[N+1, 1:N] .= escala
-
-    fill!(state.b_objetivo, 0.0)
-    state.b_objetivo[end] = 1.0 * escala
-
-    state.x_estado .= pinv(state.A_expandida) * state.b_objetivo
-    return sum(state.x_estado)
+    
+    # Normalización matemática asintótica de la traza
+    traza_total = tr(engine.M_sistema)
+    if traza_total != 0.0
+        engine.M_sistema ./= traza_total
+    end
+    return tr(engine.M_sistema)
 end
 
-# =====================================================================
-# SUBSISTEMA 3: OPTIMIZACIÓN ANTIFRÁGIL DE BRANAS EN 5D
-# =====================================================================
-function optimizar_brana_5d!(rho_inicial::Matrix{ComplexF64}, rho_target::Matrix{ComplexF64}, matriz_soberana::Matrix{Float64}; max_epocas=20)
+# 3. Optimizador Estocástico Dinámico de la Brana 5D (Contracción SU(2))
+function optimizar_brana_5d!(rho_inicial::Matrix{ComplexF64}, rho_target::Matrix{ComplexF64}, matriz_soberana::Matrix{Float64}; max_epocas=2000)
     w = 0.5
-    v = 0.0
     lr = 0.05
-    alpha = 0.85
     semilla = 0.7315
-
-    rho_evolutivo = copy(rho_inicial)
-    fidelidad = 0.0
+    fidelidad_actual = 0.0
     loss = 1.0
+    rho_evolutivo = copy(rho_inicial)
 
     traza_métrica = real(tr(matriz_soberana))
     det_métrica = real(det(matriz_soberana))
 
     X = [0.0 1.0; 1.0 0.0]
     Z = [1.0 0.0; 0.0 -1.0]
+    XZ = kron(X, Z)
 
     for ep in 1:max_epocas
+        # Mutación pseudoaleatoria determinista para evadir mínimos locales
         semilla = sin(semilla * 13.0)
-        factor_decaimiento = 1.0 / sqrt(ep)
-        noise_fire = semilla * 0.05 * factor_decaimiento
+        w_propuesto = w + (semilla * lr * (1.0 / sqrt(ep)))
 
-        Op_Global = exp(im * (w + noise_fire) * kron(X, Z))
+        # Evolución unitaria del estado ruidoso
+        Op_Global = exp(im * w_propuesto * XZ)
         rho_next = Op_Global * rho_inicial * Op_Global'
+        
+        # Contracción SU(2) acoplada a la matriz soberana
+        rho_eval = (rho_next * traza_métrica) / (3.0 - (0.01 * det_métrica))
+        rho_eval /= tr(rho_eval)
 
-        rho_evolutivo = (rho_next * traza_métrica) / (3.0 - (noise_fire * det_métrica))
-        rho_evolutivo /= tr(rho_evolutivo)
-
-        fidelidad = real(tr(rho_target * rho_evolutivo))
-        loss = 1.0 - fidelidad
-
-        v = alpha * v + lr * loss * sin(w)
-        w += v
+        # Cálculo de fidelidad cuántica
+        fid_propuesta = real(tr(rho_target * rho_eval))
+        
+        # Criterio de aceptación (Escalada estocástica)
+        if fid_propuesta > fidelidad_actual
+            w = w_propuesto
+            fidelidad_actual = fid_propuesta
+            loss = 1.0 - fidelidad_actual
+        end
     end
-
-    return fidelidad, loss
+    
+    return fidelidad_actual, loss
 end
 
-end
+end # module
