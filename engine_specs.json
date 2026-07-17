@@ -1,19 +1,19 @@
 {
-  "engine_name": "Quantum_RSI_Engine_ZeroAlloc",
-  "version": "1.12.6-Termux_Android",
   "architecture": "aarch64-linux-android",
+  "engine_name": "Quantum_RSI_Engine_ZeroAlloc",
   "instance_root": "/root/quantum_api_mermin_perez",
   "subsystems": {
-    "algebraic_core": "Symbolics.jl",
-    "stochastic_solver": "Distributions.jl",
-    "matrix_dimension": "2048x2048",
-    "active_qubits": 11,
-    "memory_protocol": "Zero-Allocation-InPlace"
+    "active_qubits": 25,
+    "matrix_core": "mi_matriz_propia.jl",
+    "matrix_dimension": "33554432x33554432",
+    "memory_protocol": "Zero-Allocation-InPlace",
+    "stochastic_solver": "Distributions.jl"
   },
   "telemetry_targets": {
-    "validation_file": "qre_validation_core.json",
     "metrics_log": "daemon_espectro.log",
-    "shots_output": "conteo_shots_quantum.json"
+    "shots_output": "conteo_shots_quantum.json",
+    "validation_file": "qre_validation_core.json"
   },
-  "timestamp": "2026-07-14T21:49:00Z"
+  "timestamp": "2026-07-17T01:42:00Z",
+  "version": "1.12.6-Termux_Android"
 }
