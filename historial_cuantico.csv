@@ -5,3 +5,5 @@ Fecha_Hora,Qubits,Dimension,Energia_Fundamental,Tiempo_Segundos
 2026-07-16 01:28:22,22_Puro,20971520,-12.000000,61.2566
 2026-07-17 01:49:26,22_Puro,20971520,-12.000000,59.7518
 2026-07-17 02:22:00, 26_Distribuido, 67108864, Matrix-Free, 11.028607411
+2026-07-17 02:28:00, 27_Distribuido, 134217728, Matrix-Free, 11.484779758
+2026-07-17 02:32:00, 30_Chunked, 1073741824, Matrix-Free-Lazy, 79.56580313
