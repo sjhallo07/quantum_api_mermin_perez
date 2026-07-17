@@ -33,38 +33,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout del código
         uses: actions/checkout@v4
 
-      - name: Setup Julia
+      - name: Configurar entorno de Julia
         uses: julia-actions/setup-julia@v2
         with:
           version: "1.10"
           arch: x64
 
-      - name: Cache Julia packages
+      - name: Cache de paquetes Julia
         uses: julia-actions/cache@v2
 
-      - name: Install root dependencies
+      - name: Instalar dependencias del proyecto raíz
         run: |
           julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
-      - name: Install docs dependencies
+      - name: Instalar dependencias de la carpeta docs
         run: |
           julia --project=docs -e 'using Pkg; Pkg.instantiate()'
 
-      - name: Validate Ecosistema module
+      - name: Validar módulo Ecosistema
         run: |
           julia --project=. -e 'include("Ecosistema.jl"); using .Ecosistema; @assert size(METRICA_SOBERANA_5D) == (5, 5); println("Ecosistema.jl + Distributions.jl loaded successfully")'
 
-      - name: Build docs
+      - name: Compilar Documentación Técnica
         env:
           CI: "true"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          julia --project=docs -e 'using Pkg; Pkg.instantiate(); include("docs/make.jl")'
+          julia --project=docs docs/make.jl
 
-      - name: Upload Pages artifact
+      - name: Subir artefacto para GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/build
@@ -77,6 +77,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Desplegar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

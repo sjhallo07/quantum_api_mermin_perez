@@ -52,7 +52,7 @@ jobs:
     - name: Autoguardar matriz actualizada en el repositorio
       run: |
         git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@://github.com"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
         if git status --porcelain -- matrices_output.json | grep -q .; then
           git add matrices_output.json
           git commit -m "chore: actualización automática de matrices [skip ci]"
