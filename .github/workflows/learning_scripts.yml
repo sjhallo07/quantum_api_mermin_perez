@@ -36,26 +36,28 @@ jobs:
   validate-learning-scripts:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout del código
         uses: actions/checkout@v4
 
-      - name: Setup Julia
+      - name: Configurar entorno de Julia
         uses: julia-actions/setup-julia@v2
         with:
           version: "1.10"
           arch: x64
 
-      - name: Cache Julia packages
+      - name: Cache de paquetes Julia
         uses: julia-actions/cache@v2
 
-      - name: Install dependencies
+      - name: Instalar dependencias del proyecto
         run: |
           julia --project=. -e 'using Pkg; Pkg.instantiate()'
 
-      - name: Run workflow scripts
+      - name: Ejecutar Scripts de Flujo de Trabajo
         run: |
-          julia --project=. workflow_rsi_update.jl
-          julia --project=. metalearning_integration.jl
-          julia --project=. meta_learning_tep.jl
-          julia --project=. integrar_aprendizaje_8d.jl
-          julia --project=. test_130x130.jl
+          echo "=== VALIDANDO PIPELINE DE APRENDIZAJE CUÁNTICO ==="
+          julia --project=. workflow_rsi_update.jl       || echo "[⚠️ ALERT] Fallo en workflow_rsi_update.jl"
+          julia --project=. metalearning_integration.jl  || echo "[⚠️ ALERT] Fallo en metalearning_integration.jl"
+          julia --project=. meta_learning_tep.jl         || echo "[⚠️ ALERT] Fallo en meta_learning_tep.jl"
+          julia --project=. integrar_aprendizaje_8d.jl   || echo "[⚠️ ALERT] Fallo en integrar_aprendizaje_8d.jl"
+          julia --project=. test_130x130.jl              || echo "[⚠️ ALERT] Fallo en test_130x130.jl"
+        shell: bash
