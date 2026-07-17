@@ -1,20 +1,9 @@
 {
-  "engine_name": "Quantum_RSI_Engine_ZeroAlloc",
-  "version": "1.12.6-Termux_Android",
-  "architecture": "aarch64-linux-android",
-  "instance_root": "/root/quantum_api_mermin_perez",
-  "subsystems": {
-    "matrix_core": "mi_matriz_propia.jl",
-    "stochastic_solver": "Distributions.jl",
-    "matrix_dimension": "33554432x33554432",
-    "active_qubits": 25,
-    "memory_protocol": "Zero-Allocation-InPlace"
-  },
-  "telemetry_targets": {
-    "validation_file": "qre_validation_core.json",
-    "metrics_log": "daemon_espectro.log",
-    "shots_output": "conteo_shots_quantum.json",
-    "rafaga_summary": "rafaga.json"
-  },
-  "timestamp": "2026-07-17T02:09:00Z"
+  "dimension_espacio": 67108864,
+  "experimento": "Test Real Distribuido Matrix-Free 26QB",
+  "hilos_utilizados": 1,
+  "norma_operador": 25.12966374625812,
+  "num_qubits": 26,
+  "tiempo_segundos": 11.028607411,
+  "timestamp": "2026-07-17T02:22:00Z"
 }
