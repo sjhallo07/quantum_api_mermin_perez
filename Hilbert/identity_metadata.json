@@ -1,0 +1,33 @@
+{
+  "academic_transcript_hash": "e8eee1e23b1a07b4864e8c0b8ca20f08e1b922f4da35a07eca459b812d6cecae",
+  "academic_transcript_hash_filename": "academic_transcript.pdf",
+  "algebra_hash": "c4db24e1c0e9287c03e2460abd1dc6ba1a09eb42026e8f4b111257275e5ef8ca",
+  "algebra_hash_filename": "algebra.pdf",
+  "algebrapdf_hash": "c4db24e1c0e9287c03e2460abd1dc6ba1a09eb42026e8f4b111257275e5ef8ca",
+  "algebrapdf_hash_filename": "algebrapdf.pdf",
+  "chaos_hash": "4000df7dffde7aeb8b96cd4a7a79cbedc2d297acde2320778e1375dca49292e5",
+  "chaos_hash_filename": "chaos.pdf",
+  "experiment": "SUCCESS_RSI_ZERO_ALLOCATION_WORKFLOW",
+  "hilbert_spaces_entire_functions_hash": "35ac3a38e8d830f080d594e20cfddf60eeb1b918e114e33c51e039b5279a789c",
+  "hilbert_spaces_entire_functions_hash_filename": "hilbert_spaces_entire_functions.pdf",
+  "planck_hash": "04817749c19b9e6d2bacf4d82a7b9ec2cd778cb0c8d1f1cb86d282c48928627b",
+  "planck_hash_filename": "planck.pdf",
+  "polyakov_hash": "83accb29ea9e003e6c9fae95c7231f1f2253b980d73af5c55818467ba6e22667",
+  "polyakov_hash_filename": "polyakov.pdf",
+  "relativity_hash": "094362537c12f7938edacd726cecdd93ab7901ba3a8a59c6e1cd984434b91365",
+  "relativity_hash_filename": "relativity.pdf",
+  "source_engine_hash": "4c892793265a349fefb9b34bf29b810d65f21c6dcc8db185968fd53e31b5d7c4",
+  "stability_test": {
+    "hilbert_test_diagonal_error": 0.0,
+    "hilbert_test_epsilon": 1.0e-10,
+    "hilbert_test_full_diagonal_error": 8.191390182861927e-10,
+    "hilbert_test_spectral_error": 8.251334851068219e-10
+  },
+  "strings_hash": "518fb210d734d17555a38a07d1a7ef7a429d991f5d213647abb6b573a9b021f3",
+  "strings_hash_filename": "strings.pdf",
+  "swampland_tep_hash": "eb9e9d01879366b591c78e2d2a0a69780c42eea12f3b14a668797f9d7af04d78",
+  "swampland_tep_hash_filename": "swampland_tep.pdf",
+  "tep_falsifiable_signature_hash": "9ddb7c8b286846f47615de087b63a00afc9236cc222ff2ca0ff853b09ee2ebcd",
+  "tep_falsifiable_signature_hash_filename": "tep_falsifiable_signature.pdf",
+  "timestamp_creation": "2026-07-17T18:13:25.764"
+}
