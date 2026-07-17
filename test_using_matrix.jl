@@ -7,10 +7,41 @@ include("api_algebraica.jl")
 
 using .Ecosistema
 using .ApiMatricial
-using LinearAlgebra
 using Distributions
 using JSON
 using Printf
+
+# ALGORITMO QR NATIVO POR ROTACIONES DE GIVENS (LIBRE DE LINEARALGEBRA)
+function diagonalizar_qr_nativo(A::Matrix{ComplexF64}; max_iter=80, tol=1e-10)
+    n = size(A, 1)
+    T = copy(A)
+    for iter in 1:max_iter
+        for i in 1:(n-1)
+            for j in (i+1):n
+                if abs(T[j, i]) > tol
+                    r = hypot(abs(T[i, i]), abs(T[j, i]))
+                    c = T[i, i] / r
+                    s = T[j, i] / r
+                    for k in i:n
+                        tau1 = T[i, k]
+                        tau2 = T[j, k]
+                        T[i, k] = c * tau1 + s * tau2
+                        T[j, k] = -conj(s) * tau1 + conj(c) * tau2
+                    end
+                    for k in 1:min(j+1, n)
+                        tau1 = T[k, i]
+                        tau2 = T[k, j]
+                        T[k, i] = conj(c) * tau1 + conj(s) * tau2
+                        T[k, j] = -s * tau1 + c * tau2
+                    end
+                end
+            end
+        end
+        sub_sum = sum(abs(T[k+1, k]) for k in 1:(n-1))
+        if sub_sum < tol break end
+    end
+    return [real(T[i, i]) for i in 1:n]
+end
 
 println("====================================================")
 println("   INICIANDO TEST GLOBAL: ENFOQUE MATRIX PURA       ")
@@ -37,7 +68,7 @@ end
 
 dim_A = length(block_raw)
 dim_B = length(block_zne)
-dim_total = dim_A + dim_B # 130 exactos
+dim_total = dim_A + dim_B
 
 # 2. INSTANCIACIÓN MATRICIAL COMPLEJA EN MEMORIA ESTÁTICA
 mutable struct MotorBypass
@@ -59,40 +90,48 @@ for i in 1:dim_total
     end
 end
 
-engine_pool = MotorBypass(M_estatica / tr(M_estatica))
-traza_calibrada = tr(engine_pool.M_sistema)
+traza_inicial = sum(M_estatica[i, i] for i in 1:dim_total)
+engine_pool = MotorBypass(M_estatica / traza_inicial)
+
+traza_calibrada = sum(engine_pool.M_sistema[i, i] for i in 1:dim_total)
 println("-> Éxito Motor. Traza física del espacio de Hilbert: ", traza_calibrada)
 
 # 3. INYECCIÓN DE RUIDO MULTIVARIADO CONTINUO (DISTRIBUCIÓN DE WISHART ESTABLE)
 println("\n[Distributions] Modelando fluctuaciones asimétricas sobre 130x130...")
-matriz_identidad = Matrix{Float64}(I, dim_total, dim_total)
+matriz_identidad = zeros(Float64, dim_total, dim_total)
+for i in 1:dim_total
+    matriz_identidad[i, i] = 1.0
+end
 
-# Usamos la distribución de Wishart (Grados de libertad > dimensión) para asegurar estabilidad cuántica
-grados_libertad = dim_total + 2 # 132
+grados_libertad = dim_total + 2
 dist_wishart = Wishart(grados_libertad, matriz_identidad / grados_libertad)
 ruido_asimetrico = ComplexF64.(rand(dist_wishart))
 
-# Acoplamos el ruido estocástico de forma controlada (5% de perturbación)
 engine_pool.M_sistema .= 0.95 .* engine_pool.M_sistema .+ 0.05 .* ruido_asimetrico
-engine_pool.M_sistema ./= tr(engine_pool.M_sistema) # Re-normalización de seguridad
+traza_ruido = sum(engine_pool.M_sistema[i, i] for i in 1:dim_total)
+engine_pool.M_sistema ./= traza_ruido
 
-# 4. EXTRACCIÓN DE PROPIEDADES MEDIANTE LA API MATRICIAL
-pureza = proyectar_sistema_algebraico!(engine_pool)
+# 4. EXTRACCIÓN DE PROPIEDADES MEDIANTE LA API MATRICIAL (ÁMBITO CALIFICADO)
+pureza = ApiMatricial.proyectar_sistema_algebraico!(engine_pool)
 
 # 5. CÁLCULO DE ENTROPÍA DE VON NEUMANN A GRAN ESCALA
 println("\n[Métrica] Evaluando entropía de Von Neumann (Pérdida de bits cuánticos)...")
-autovalores = eigen(engine_pool.M_sistema).values
+
+M_normalizada = copy(engine_pool.M_sistema)
+traza_real = sum(real(M_normalizada[i, i]) for i in 1:size(M_normalizada, 1))
+if abs(traza_real) > 1e-12
+    M_normalizada ./= traza_real
+end
+
+autovalores_estables = diagonalizar_qr_nativo(M_normalizada)
 
 entropia = 0.0
-for λ in autovalores
-    magnitud_λ = abs(λ)
-    if magnitud_λ > 1e-12  # Filtro de estabilidad asintótica para evitar singularidades
-        global entropia -= magnitud_λ * log2(magnitud_λ)
+for λ in autovalores_estables
+    if 1e-10 < λ <= 1.0
+        global entropia -= λ * log2(λ)
     end
 end
 
-@printf("-> Entropía cuántica total a escala 130x130: %.6f bits\n", entropia)
-
-println("\n====================================================")
-println("   ¡VALIDACIÓN DE ENFOQUE MATRICIAL FINALIZADA!     ")
+println("====================================================")
+@printf("-> Entropía cuántica corregida (0 a log2(130)): %.6f bits\n", entropia)
 println("====================================================")
