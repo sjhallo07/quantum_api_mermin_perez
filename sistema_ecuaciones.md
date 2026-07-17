@@ -2,7 +2,7 @@
 
 ## 📊 Características del Sistema
 - **Dimensión:** 106 ecuaciones con 106 variables.
-- **Traza Verificada:** 0.9999999999999997
+- **Traza Verificada:** 0.9999999999999996
 
 ## 📝 Listado de Probabilidades Reconstruidas
 ```text
