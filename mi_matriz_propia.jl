@@ -123,3 +123,13 @@ function ejecutar_pipeline_30qubits_lazy()
 end
 
 ejecutar_pipeline_30qubits_lazy();
+
+# ============================================
+# Exposición de la matriz de identidad para el ecosistema
+# ============================================
+const MI_MATRIZ_IDENTIDAD = NPZ.npzread("Hilbert/identity_matrix_130.npz")
+const MI_METADATA_IDENTIDAD = JSON.parsefile("Hilbert/identity_metadata.json")
+const MI_FIRMA_106 = Float64.(JSON.parsefile("qre_validation_core.json")["vector_probabilidades"])
+const MI_HASH_MOTOR = bytes2hex(sha256(read("engine_instance.json")))
+
+println("[mi_matriz_propia] Matriz de identidad expuesta para el ecosistema.")
