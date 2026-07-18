@@ -16,7 +16,7 @@
   "polyakov_hash_filename": "polyakov.pdf",
   "relativity_hash": "094362537c12f7938edacd726cecdd93ab7901ba3a8a59c6e1cd984434b91365",
   "relativity_hash_filename": "relativity.pdf",
-  "source_engine_hash": "4fb5a31a1033dd0128db74f8696b78a1db3f11123c9d3f79e74e885db14fb123",
+  "source_engine_hash": "e1526db067f2eaf63a2dbf8a34d703bb69724431700ad6136c39ac0df99e84de",
   "stability_test": {
     "hilbert_test_diagonal_error": 0.0,
     "hilbert_test_epsilon": 1.0e-10,
