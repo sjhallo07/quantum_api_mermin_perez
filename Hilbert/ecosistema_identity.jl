@@ -2,19 +2,17 @@
 # ECOSISTEMA IDENTITY – Matriz de Identidad Suprema
 # Uso: include("Hilbert/ecosistema_identity.jl")
 # ============================================
-using NPZ, JSON, LinearAlgebra, SHA
+include("identity_pure.jl")          # immutable ENGINE_HASH and verificar_firma_pura
+include("../mi_matriz_propia.jl")    # loads IDENTITY_MATRIX, FIRMA_106, etc.
 
-# Cargar matriz y metadatos (ejecutado una sola vez)
-const IDENTITY_MATRIX = NPZ.npzread("Hilbert/identity_matrix_130.npz")
-const IDENTITY_METADATA = JSON.parsefile("Hilbert/identity_metadata.json")
-const FIRMA_106 = Float64.(JSON.parsefile("qre_validation_core.json")["vector_probabilidades"])
-const ENGINE_HASH_ESPERADO = bytes2hex(sha256(read("engine_instance.json")))
+const IDENTITY_MATRIX = MI_MATRIZ_IDENTIDAD
+const IDENTITY_METADATA = MI_METADATA_IDENTIDAD
+const FIRMA_106 = MI_FIRMA_106
+const ENGINE_HASH_ESPERADO = ENGINE_HASH   # from identity_pure.jl
 
 println("[EcosistemaIdentity] Matriz 130×130 y metadatos cargados.")
 
-# Verifica que la matriz de identidad sea auténtica
 function verificar_identidad()
-    # Verificar firma
     if IDENTITY_MATRIX[1:106,1:106] ≈ Diagonal(FIRMA_106)
         println("✅ Firma cuántica intacta.")
     else
@@ -22,9 +20,8 @@ function verificar_identidad()
         return false
     end
 
-    # Verificar hash del motor
     if IDENTITY_METADATA["source_engine_hash"] == ENGINE_HASH_ESPERADO
-        println("✅ Hash del motor coincide.")
+        println("✅ Hash del motor coincide (inmutable).")
     else
         println("❌ Hash del motor NO coincide.")
         return false
@@ -34,7 +31,6 @@ function verificar_identidad()
     return true
 end
 
-# Verifica si un PDF dado (por ruta) está registrado en los metadatos
 function verificar_pdf(ruta_pdf::String)
     hash_actual = bytes2hex(sha256(read(ruta_pdf)))
     nombre = basename(ruta_pdf)
@@ -49,7 +45,6 @@ function verificar_pdf(ruta_pdf::String)
     end
 end
 
-# Al cargar, verificar automáticamente (pero permitir desactivar)
 if get(ENV, "ECOSYSTEM_SILENT", "false") != "true"
     verificar_identidad()
 end
