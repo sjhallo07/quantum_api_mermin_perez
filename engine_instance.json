@@ -1,12 +1,9 @@
 {
-  "dimension_espacio": 5368709120,
+  "dimension_espacio": 0,
   "experimento": "Test Real Chunked Matrix-Free 30QB",
   "hilos_utilizados": 8,
-  "norma_operador": 0.9999999999999998,
-  "num_qubits": 30,
-  "tiempo_segundos": 1.0150,
-  "timestamp": "2026-07-19T04:51:00Z",
-  "tag_global": "ROYAL MATRIX",
-  "propietario": "Marcos Alejandro Mora Abreu",
-  "cedula": "V-14915920"
+  "norma_operador": 0.0,
+  "num_qubits": 100,
+  "tiempo_segundos": 0.4750929,
+  "timestamp": "2026-07-17T02:32:00Z"
 }
