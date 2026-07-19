@@ -1,9 +1,9 @@
 {
-  "dimension_espacio": 1073741824,
+  "dimension_espacio": 0,
   "experimento": "Test Real Chunked Matrix-Free 30QB",
   "hilos_utilizados": 8,
-  "norma_operador": 29.499999999999996,
-  "num_qubits": 30,
-  "tiempo_segundos": 40.515217432,
+  "norma_operador": 0.0,
+  "num_qubits": 100,
+  "tiempo_segundos": 0.343769245,
   "timestamp": "2026-07-17T02:32:00Z"
 }

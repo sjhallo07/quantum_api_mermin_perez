@@ -1,6 +1,6 @@
 # ====================================================================
 # ARCHIVO: mi_matriz_propia.jl
-# REPOSITORIO: https://github.com
+# REPOSITORIO: https://github.com/sjhallo07/quantum_api_mermin_perez.git
 # PARADIGMA: Matrix-Free Chunked Lazy Evaluation (Anti-OutOfMemory)
 # DESCRIPCIÓN: Multiplicador lineal segmentado para la escala de 30 cúbits.
 #              Consumo de RAM optimizado: < 50 MB.
@@ -9,15 +9,15 @@
 using LinearAlgebra: I, tr
 using JSON
 
-function ejecutar_pipeline_30qubits_lazy()
+function ejecutar_pipeline_100qubits_lazy()
     println("====================================================")
-    println("   INICIANDO TEST EXTREMO: 30 CÚBITS (LAZY-CHUNK)   ")
+    println("   INICIANDO TEST EXTREMO: 100 CÚBITS (LAZY-CHUNK)   ")
     println("   PARADIGMA: MATRIX-FREE ANTI-OUTOFMEMORY          ")
     println("====================================================")
     
-    num_qubits = 30
+    num_qubits = 100
     dim_total = 2^num_qubits # 1,073,741,824
-    hilos_activos = Threads.nthreads()
+    hilos_activos = 8
     
     println("[Estructura] Número de Cúbits Activos:  ", num_qubits)
     println("[Estructura] Dimensión del Espacio:     ", dim_total)
@@ -94,7 +94,7 @@ function ejecutar_pipeline_30qubits_lazy()
     
     norma_final = sqrt(norma_acumulada_cuadrado)
     
-    println("-> Simulación Segmentada de 30 QB finalizada con éxito.")
+    println("-> Simulación Segmentada de 100 QB finalizada con éxito.")
     println("-> Tiempo de cómputo real: ", round(t_ejecucion, digits=4), " segundos.")
     println("-> Norma del vector resultante: ", norma_final)
     
@@ -122,4 +122,4 @@ function ejecutar_pipeline_30qubits_lazy()
     println("====================================================")
 end
 
-ejecutar_pipeline_30qubits_lazy();
+ejecutar_pipeline_100qubits_lazy();
