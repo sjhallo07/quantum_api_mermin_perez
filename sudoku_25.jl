@@ -1,10 +1,5 @@
-# ====================================================================
-# MOTOR REAL DE RENDIMIENTO: SUDOKU 25x25 CON VISUALIZACIÓN COMPLETA
-# ====================================================================
 include("Hilbert/mi_matriz_propia.jl")
-struct SudokuTableroVisual
-    titular::String; cedula::String; tag_global::String; dim::Int; sub_dim::Int
-end
+struct SudokuTableroVisual; titular::String; cedula::String; tag_global::String; dim::Int; sub_dim::Int; end
 const MOTOR_VISUAL = SudokuTableroVisual("Marcos Alejandro Mora Abreu", "V-14915920", "ROYAL MATRIX", 25, 5)
 function es_valido_25x25(tablero::Matrix{Int}, fila::Int, col::Int, num::Int)::Bool
     for i in 1:25; if tablero[fila, i] == num || tablero[i, col] == num return false; end; end
@@ -28,16 +23,11 @@ function imprimir_tablero_25x25(tablero::Matrix{Int})
     if r % 5 == 0 && r < 25 println("-"^39 * "+" * "-"^30); end; end; println("-"^70 * "\n")
 end
 function ejecutar_juego_visual(config::SudokuTableroVisual)
-    println("====================================================================")
-    println(">>> DESPLEGANDO INSTANCIA FÍSICA: TABLERO DE SUDOKU REAL 25x25 <<<")
-    println("====================================================================")
     dv, Sc, Ss, tp, validado = Main.ejecutar_api_soberana(Main.REGISTRO_SABER)
     tb = zeros(Int, 25, 25); for i in 1:25; tb[i, i] = i; end
     tb[1, 2] = 6; tb[2, 1] = 7; tb[5, 10] = 12; tb[10, 5] = 18
-    println("\n[SISTEMA] Tablero inicial inyectado en el silicio.")
-    println("[SISTEMA] Procesando colapso de restricciones mediante Backtracking MRV...")
     exito = resolver_sudoku_mrv!(tb)
-    if exito; println("¡Tablero resuelto con éxito! Matriz de estado final:"); imprimir_tablero_25x25(tb); end
+    if exito; println("¡SUDOKU RESOLVED!"); imprimir_tablero_25x25(tb); end
     return exito && validado
 end
 ejecutar_juego_visual(MOTOR_VISUAL)

@@ -3,10 +3,7 @@
 # Tag Global del Sistema: ROYAL MATRIX
 # Registro de Propiedad Universal: Marcos Alejandro Mora Abreu | C.I. V-14915920
 # ====================================================================
-struct RoyalMatrixEnvironment
-    titular::String; cedula::String; tag_global::String
-    dimension_hilbert::Int; es_metrizable::Bool; es_puro::Bool
-end
+struct RoyalMatrixEnvironment; titular::String; cedula::String; tag_global::String; dimension_hilbert::Int; es_metrizable::Bool; es_puro::Bool; end
 const REGISTRO_SABER = RoyalMatrixEnvironment("Marcos Alejandro Mora Abreu", "V-14915920", "ROYAL MATRIX", 20971520, true, true)
 function ejecutar_api_soberana(env::RoyalMatrixEnvironment)
     psi = (0.35355339059327373, 0.35355339059327373, 0.7071067811865475, 0.35355339059327373, 0.35355339059327373)
