@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{margin=1.2in}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Basic SIAM style formatting
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection.}{0.5em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \sffamily THEORY OF LINEAR INTEGRAL EQUATIONS}
+\fancyhead[R]{\small \sffamily D. HILBERT}
+\fancyfoot[C]{\thepage}
+
+\title{\vspace{-1.5cm}\Large \bfseries \sffamily Foundations of a General Theory of Linear Integral Equations\\
+\large An analytical manuscript based on the monograph by David Hilbert}
+\author{\normalsize \textbf{Presenter: Marcos Alejandro Mora Abreu} \\ \normalsize Document prepared for formal review (SIAM Format)}
+\date{\normalsize July 21, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This manuscript presents a formal structuring of the general theory of linear integral equations. It outlines the mathematical concepts that transition from the algebraic problem of quadratic forms with a finite number of variables to the transcendental problem of functions with infinite variables. The primary applications to ordinary and partial differential equations are systematically explored, concluding with the impact of this theory on fundamental problems in mathematical physics, such as the kinetic theory of gases.
+\end{abstract}
+
+\section{Introduction}
+The theory of linear integral equations constitutes a fundamental pillar in modern mathematical analysis, offering a unified approach for solving multiple problems in various branches of pure and applied mathematics. The core of this theory lies in the integral equation of the second kind:
+\begin{equation}
+f(s) = \varphi(s) - \lambda \int_{a}^{b} K(s,t)\varphi(t)dt
+\end{equation}
+where $K(s,t)$ denotes the kernel (\textit{Kern}) of the equation, $f(s)$ is a known continuous function, and $\varphi(s)$ is the unknown function to be determined.
+
+\section{The Algebraic Problem and Orthogonal Transformation}
+The methodology for the formal establishment of solutions begins by considering an algebraic analogue, specifically the system of $n$ linear equations:
+\begin{equation}
+f_p = \varphi_p - l \sum_{q=1}^{n} K_{pq}\varphi_q \quad (p = 1, 2, \dots, n)
+\end{equation}
+where the unknowns are $\varphi_1, \varphi_2, \dots, \varphi_n$. The determinant of the system, $d(l)$, and its associated minors $D(l, x/y)$ play a crucial role. If $d(l) \neq 0$, the solutions are expressed via linear forms constructed from the minors of the determinant. 
+
+The problem is intimately linked to the theory of the orthogonal transformation of quadratic forms. When the kernel is symmetric ($K_{pq} = K_{qp}$), the roots $l^{(1)}, l^{(2)}, \dots, l^{(n)}$ of the equation $d(l) = 0$ are all real. The associated homogeneous solutions represent the eigenvectors of the system, laying the algebraic foundations for the general expansion theorem in the continuous domain.
+
+\section{The Transcendental Problem}
+Through a rigorous limit process ($n \to \infty$), the algebraic formulation transcends to the continuous domain. Functions of infinite variables converge in the theory of completely continuous (\textit{vollstetig}) bilinear and quadratic forms.
+
+The continuous analogue of the system of linear equations is the integral equation. The solutions of this equation depend critically on the parameter $\lambda$. If $\lambda$ is not an eigenvalue (\textit{Eigenwert}), the homogeneous equation lacks a non-trivial solution, whereas the inhomogeneous equation admits a unique solution expressed through an analytic \textit{Resolvent} $K(s,t;\lambda)$:
+\begin{equation}
+\varphi(s) = f(s) + \lambda \int_{a}^{b} K(s,t;\lambda)f(t)dt
+\end{equation}
+
+For the eigenvalues, the homogeneous equation admits non-trivial solutions known as eigenfunctions (\textit{Eigenfunktionen}). Any function $f(s)$ representable by the kernel in the form $\int K(s,t)g(t)dt$ can be expanded into an absolutely and uniformly convergent series of these eigenfunctions:
+\begin{equation}
+f(s) = \sum_{p} c_p \varphi_p(s) = \sum_{p} \varphi_p(s) \int_{a}^{b} f(s)\varphi_p(s)ds
+\end{equation}
+
+\section{Applications to Differential Equations}
+One of the most profound consequences of the theory of integral equations is its capacity to solve boundary value problems in the theory of differential equations.
+
+\subsection{Ordinary Differential Equations}
+For the general self-adjoint ordinary differential equation of the second order:
+\begin{equation}
+L(u) \equiv \frac{d}{dx}\left(p \frac{du}{dx}\right) + qu = 0 \quad (p > 0)
+\end{equation}
+the \textit{Green's function} $G(x,\xi)$ is introduced, which automatically incorporates the homogeneous boundary conditions at the ends of the interval. The resolution of the boundary value problem is then reduced to solving a symmetric integral equation of the first kind:
+\begin{equation}
+f(x) = \int_{a}^{b} G(x,\xi)\varphi(\xi)d\xi
+\end{equation}
+whose unknown function $\varphi(x) = -L(f(x))$ solves the system. The differential equation $L(u) + \lambda u = 0$ thus possesses infinitely many discrete eigenvalues.
+
+\subsection{Partial Differential Equations}
+The method generalizes directly to partial differential equations of the elliptic type, such as $L(u) \equiv \frac{\partial}{\partial x}(p \frac{\partial u}{\partial x}) + \frac{\partial}{\partial y}(p \frac{\partial u}{\partial y}) + qu = 0$. By constructing the Green's function for a domain with boundary $C$, the boundary value problems of mathematical physics are rigorously reformulated, which ensures the existence of a countably infinite set of spatial eigenfunctions.
+
+\section{Applications to Mathematical Physics and Kinetic Theory of Gases}
+The developed tools transcend pure mathematics. In the calculus of variations, Dirichlet's minimum problem is directly linked to Gauss's variational problem for quadratic integral forms. 
+
+Particularly in the kinetic theory of gases, the Maxwell-Boltzmann collision equation primarily leads to an orthogonal linear integral equation of the second kind with a symmetric kernel. This consolidates the integral equation not only as an analytical derivative of differential equations, but as a primary descriptive principle empirically founded on the law of collisions, constituting one of the most compelling physical validations of the presented resolution method.
+
+\section{Conclusion}
+The formalization and unified resolution of linear integral equations through limit processes provide the algorithmic and conceptual scaffolding required for problems in functional analysis. It establishes an indissoluble link between finite-dimensional algebra and analysis in infinite-dimensional spaces.
+
+\end{document}
