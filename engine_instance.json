@@ -1,10 +1,10 @@
 {
-  "dimension_espacio": 1073741824,
-  "experimento": "Test Real Chunked Matrix-Free 100 Variables Continuas",
+  "dimension_espacio": 32,
+  "experimento": "Test Real Chunked Matrix-Free 5 Variables Continuas",
   "hilos_utilizados": 8,
   "norma_operador": 1.0,
-  "num_variables_continuas": 100,
-  "entropia_bits": 11.226288,
-  "tiempo_segundos": 0.112262,
+  "num_variables_continuas": 5,
+  "entropia_bits": 2.321928,
+  "tiempo_segundos": 0.04512,
   "timestamp": "2026-07-21T16:29:00Z"
 }
