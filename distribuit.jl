@@ -23,7 +23,7 @@ dim_red = 8
 grados_libertad = dim_red + 2
 
 # Matriz identidad base para el muestreo Wishart
-matriz_escala = Matrix{Float64}(I, dim_red, dim_red)
+matriz_escala = real(I)
 d_wishart = InverseWishart(grados_libertad, matriz_escala)
 
 # Extraemos una matriz aleatoria real de la distribución y la llevamos al campo complejo
