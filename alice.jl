@@ -4,7 +4,6 @@
 # Basado en De Branges (1968) y Hilbert (1912) - Versión Corregida
 # ===========================================================================
 
-using LinearAlgebra, QuadGK, Plots
 
 # ------------------------------------------------------------
 # 1. DEFINICIÓN DE BOB (Receptor)

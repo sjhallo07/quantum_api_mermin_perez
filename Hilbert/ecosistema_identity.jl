@@ -1,4 +1,3 @@
-using LinearAlgebra
 using SHA
 
 struct OperadorDeBrangesHilbert <: AbstractMatrix{ComplexF64} end
