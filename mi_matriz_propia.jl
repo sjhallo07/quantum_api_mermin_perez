@@ -11,7 +11,7 @@ using JSON
 
 function ejecutar_pipeline_100qubits_lazy()
     println("====================================================")
-    println("   INICIANDO TEST EXTREMO: 100 CÚBITS (LAZY-CHUNK)   ")
+    println("   INICIANDO TEST EXTREMO: 100 VARIABLES (LAZY-CHUNK)   ")
     println("   PARADIGMA: MATRIX-FREE ANTI-OUTOFMEMORY          ")
     println("====================================================")
     
@@ -19,7 +19,7 @@ function ejecutar_pipeline_100qubits_lazy()
     dim_total = 2^num_qubits # 1,073,741,824
     hilos_activos = 8
     
-    println("[Estructura] Número de Cúbits Activos:  ", num_qubits)
+    println("[Estructura] Número de Elementos Activos:  ", num_qubits)
     println("[Estructura] Dimensión del Espacio:     ", dim_total)
     println("[Ecosistema] Hilos de CPU distribuidos: ", hilos_activos)
     println("[Ecosistema] Optimización de Memoria:   Activa (Chunking de 1M)")
@@ -94,7 +94,7 @@ function ejecutar_pipeline_100qubits_lazy()
     
     norma_final = sqrt(norma_acumulada_cuadrado)
     
-    println("-> Simulación Segmentada de 100 QB finalizada con éxito.")
+    println("-> Evaluación Segmentada de 100 Variables finalizada con éxito.")
     println("-> Tiempo de cómputo real: ", round(t_ejecucion, digits=4), " segundos.")
     println("-> Norma del vector resultante: ", norma_final)
     
